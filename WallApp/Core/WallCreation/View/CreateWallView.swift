@@ -59,7 +59,7 @@ struct CreateWallView: View {
                     Button("Post") {
                         
                     }
-                    .opacity(caption.isEmpty ? 0.5 : 1.1)
+                    .opacity(caption.isEmpty ? 0.5 : 1.0)
                     .disabled(caption.isEmpty)
                     .font(.subheadline)
                     .fontWeight(.semibold)
