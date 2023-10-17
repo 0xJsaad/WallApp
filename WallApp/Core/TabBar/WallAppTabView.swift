@@ -9,6 +9,7 @@ import SwiftUI
 
 struct WallAppTabView: View {
     @State private var selectedTab = 0
+    @State private var showCreatedWallView = false
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -27,7 +28,7 @@ struct WallAppTabView: View {
                 .onAppear() { selectedTab = 1}
                 .tag(1)
             
-            CreateThreadView()
+            Text("")
                 .tabItem {
                     Image(systemName: "plus")
                 }
@@ -50,10 +51,17 @@ struct WallAppTabView: View {
                 .onAppear() { selectedTab = 4}
                 .tag(4)
         }
+        .onChange(of: selectedTab) {
+            showCreatedWallView = $0 == 2
+        }
+        .sheet(isPresented: $showCreatedWallView, onDismiss: {
+            selectedTab = 0
+        }, content: {
+            CreateWallView()
+        })
         .tint(.purple)
     }
 }
-
 #Preview {
     WallAppTabView()
 }
