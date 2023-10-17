@@ -24,6 +24,7 @@
 		D547BF632ADE2D030006D2B4 /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF622ADE2D030006D2B4 /* CreateThreadView.swift */; };
 		D547BF672ADE2D2B0006D2B4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */; };
 		D547BF6D2ADE2E880006D2B4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */; };
+		D547BF6F2ADE31CA0006D2B4 /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF6E2ADE31CA0006D2B4 /* ThreadCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		D547BF622ADE2D030006D2B4 /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
 		D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		D547BF6E2ADE31CA0006D2B4 /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				D547BF5A2ADE2C0C0006D2B4 /* FeedView.swift */,
+				D547BF6E2ADE31CA0006D2B4 /* ThreadCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				D547BF6D2ADE2E880006D2B4 /* ActivityView.swift in Sources */,
 				D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */,
 				D547BF522ADE21CF0006D2B4 /* WallAppTextFieldModifiers.swift in Sources */,
+				D547BF6F2ADE31CA0006D2B4 /* ThreadCell.swift in Sources */,
 				D547BF542ADE237E0006D2B4 /* WallAppButtonModifier.swift in Sources */,
 				D547BF572ADE29B60006D2B4 /* WallAppTabView.swift in Sources */,
 				D547BF672ADE2D2B0006D2B4 /* ProfileView.swift in Sources */,

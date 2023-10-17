@@ -14,7 +14,7 @@ struct WallAppButtonModifier: ViewModifier {
             .fontWeight(.semibold)
             .foregroundColor(.white)
             .frame(width: 352, height: 44)
-            .background(.black)
+            .background(.purple)
             .cornerRadius(8)
     }
 }

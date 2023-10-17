@@ -50,7 +50,7 @@ struct WallAppTabView: View {
                 .onAppear() { selectedTab = 4}
                 .tag(4)
         }
-        .tint(.black)
+        .tint(.purple)
     }
 }
 
