@@ -13,7 +13,7 @@ struct FeedView: View {
             ScrollView(showsIndicators: false) {
                 LazyVStack {
                     ForEach(0 ... 10, id: \.self) { thhread in
-                        ThreadCell()
+                        WallCell()
                     }
                 }
             }

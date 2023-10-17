@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ThreadCell: View {
+struct WallCell: View {
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 12) {
@@ -74,5 +74,5 @@ struct ThreadCell: View {
 }
 
 #Preview {
-    ThreadCell()
+    WallCell()
 }

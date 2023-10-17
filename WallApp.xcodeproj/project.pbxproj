@@ -24,9 +24,10 @@
 		D547BF632ADE2D030006D2B4 /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF622ADE2D030006D2B4 /* CreateThreadView.swift */; };
 		D547BF672ADE2D2B0006D2B4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */; };
 		D547BF6D2ADE2E880006D2B4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */; };
-		D547BF6F2ADE31CA0006D2B4 /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF6E2ADE31CA0006D2B4 /* ThreadCell.swift */; };
+		D547BF6F2ADE31CA0006D2B4 /* WallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF6E2ADE31CA0006D2B4 /* WallCell.swift */; };
 		D547BF722ADE3ECA0006D2B4 /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF712ADE3ECA0006D2B4 /* CircularProfileImageView.swift */; };
 		D547BF742ADE3F6B0006D2B4 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF732ADE3F6B0006D2B4 /* UserCell.swift */; };
+		D547BF792ADE49350006D2B4 /* ProfileWallFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF782ADE49340006D2B4 /* ProfileWallFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +68,10 @@
 		D547BF622ADE2D030006D2B4 /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
 		D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
-		D547BF6E2ADE31CA0006D2B4 /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
+		D547BF6E2ADE31CA0006D2B4 /* WallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallCell.swift; sourceTree = "<group>"; };
 		D547BF712ADE3ECA0006D2B4 /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
 		D547BF732ADE3F6B0006D2B4 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		D547BF782ADE49340006D2B4 /* ProfileWallFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWallFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,7 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				D547BF5A2ADE2C0C0006D2B4 /* FeedView.swift */,
-				D547BF6E2ADE31CA0006D2B4 /* ThreadCell.swift */,
+				D547BF6E2ADE31CA0006D2B4 /* WallCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -304,6 +306,7 @@
 		D547BF642ADE2D0C0006D2B4 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				D547BF752ADE48EE0006D2B4 /* Model */,
 				D547BF652ADE2D1E0006D2B4 /* View */,
 			);
 			path = Profile;
@@ -340,6 +343,14 @@
 				D547BF732ADE3F6B0006D2B4 /* UserCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		D547BF752ADE48EE0006D2B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF782ADE49340006D2B4 /* ProfileWallFilter.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,8 +492,9 @@
 				D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */,
 				D547BF722ADE3ECA0006D2B4 /* CircularProfileImageView.swift in Sources */,
 				D547BF742ADE3F6B0006D2B4 /* UserCell.swift in Sources */,
+				D547BF792ADE49350006D2B4 /* ProfileWallFilter.swift in Sources */,
 				D547BF522ADE21CF0006D2B4 /* WallAppTextFieldModifiers.swift in Sources */,
-				D547BF6F2ADE31CA0006D2B4 /* ThreadCell.swift in Sources */,
+				D547BF6F2ADE31CA0006D2B4 /* WallCell.swift in Sources */,
 				D547BF542ADE237E0006D2B4 /* WallAppButtonModifier.swift in Sources */,
 				D547BF572ADE29B60006D2B4 /* WallAppTabView.swift in Sources */,
 				D547BF672ADE2D2B0006D2B4 /* ProfileView.swift in Sources */,
