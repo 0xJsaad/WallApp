@@ -21,7 +21,7 @@
 		D547BF572ADE29B60006D2B4 /* WallAppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF562ADE29B60006D2B4 /* WallAppTabView.swift */; };
 		D547BF5B2ADE2C0C0006D2B4 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF5A2ADE2C0C0006D2B4 /* FeedView.swift */; };
 		D547BF5F2ADE2C920006D2B4 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF5E2ADE2C920006D2B4 /* ExploreView.swift */; };
-		D547BF632ADE2D030006D2B4 /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF622ADE2D030006D2B4 /* CreateThreadView.swift */; };
+		D547BF632ADE2D030006D2B4 /* CreateWallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF622ADE2D030006D2B4 /* CreateWallView.swift */; };
 		D547BF672ADE2D2B0006D2B4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */; };
 		D547BF6D2ADE2E880006D2B4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */; };
 		D547BF6F2ADE31CA0006D2B4 /* WallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF6E2ADE31CA0006D2B4 /* WallCell.swift */; };
@@ -66,7 +66,7 @@
 		D547BF562ADE29B60006D2B4 /* WallAppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppTabView.swift; sourceTree = "<group>"; };
 		D547BF5A2ADE2C0C0006D2B4 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		D547BF5E2ADE2C920006D2B4 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
-		D547BF622ADE2D030006D2B4 /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
+		D547BF622ADE2D030006D2B4 /* CreateWallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWallView.swift; sourceTree = "<group>"; };
 		D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		D547BF6E2ADE31CA0006D2B4 /* WallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallCell.swift; sourceTree = "<group>"; };
@@ -201,7 +201,7 @@
 				D547BF582ADE2BFA0006D2B4 /* Feed */,
 				D547BF642ADE2D0C0006D2B4 /* Profile */,
 				D547BF492ADE169F0006D2B4 /* Root */,
-				D547BF602ADE2CDA0006D2B4 /* ThreadCreation */,
+				D547BF602ADE2CDA0006D2B4 /* WallCreation */,
 				D547BF552ADE29870006D2B4 /* TabBar */,
 			);
 			path = Core;
@@ -289,18 +289,18 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		D547BF602ADE2CDA0006D2B4 /* ThreadCreation */ = {
+		D547BF602ADE2CDA0006D2B4 /* WallCreation */ = {
 			isa = PBXGroup;
 			children = (
 				D547BF612ADE2CE20006D2B4 /* View */,
 			);
-			path = ThreadCreation;
+			path = WallCreation;
 			sourceTree = "<group>";
 		};
 		D547BF612ADE2CE20006D2B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D547BF622ADE2D030006D2B4 /* CreateThreadView.swift */,
+				D547BF622ADE2D030006D2B4 /* CreateWallView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -502,7 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D547BF632ADE2D030006D2B4 /* CreateThreadView.swift in Sources */,
+				D547BF632ADE2D030006D2B4 /* CreateWallView.swift in Sources */,
 				D547BF7D2ADE50EF0006D2B4 /* EditProfileView.swift in Sources */,
 				D547BF5B2ADE2C0C0006D2B4 /* FeedView.swift in Sources */,
 				D547BF5F2ADE2C920006D2B4 /* ExploreView.swift in Sources */,
