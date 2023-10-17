@@ -1,0 +1,669 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF172ADE162F0006D2B4 /* WallAppApp.swift */; };
+		D547BF1A2ADE162F0006D2B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF192ADE162F0006D2B4 /* ContentView.swift */; };
+		D547BF1C2ADE16310006D2B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D547BF1B2ADE16310006D2B4 /* Assets.xcassets */; };
+		D547BF1F2ADE16310006D2B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D547BF1E2ADE16310006D2B4 /* Preview Assets.xcassets */; };
+		D547BF292ADE16310006D2B4 /* WallAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF282ADE16310006D2B4 /* WallAppTests.swift */; };
+		D547BF332ADE16310006D2B4 /* WallAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF322ADE16310006D2B4 /* WallAppUITests.swift */; };
+		D547BF352ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF342ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift */; };
+		D547BF4D2ADE16CC0006D2B4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF4C2ADE16CC0006D2B4 /* LoginView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D547BF252ADE16310006D2B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D547BF0C2ADE162F0006D2B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D547BF132ADE162F0006D2B4;
+			remoteInfo = WallApp;
+		};
+		D547BF2F2ADE16310006D2B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D547BF0C2ADE162F0006D2B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D547BF132ADE162F0006D2B4;
+			remoteInfo = WallApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D547BF142ADE162F0006D2B4 /* WallApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D547BF172ADE162F0006D2B4 /* WallAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppApp.swift; sourceTree = "<group>"; };
+		D547BF192ADE162F0006D2B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D547BF1B2ADE16310006D2B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D547BF1E2ADE16310006D2B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D547BF242ADE16310006D2B4 /* WallAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WallAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D547BF282ADE16310006D2B4 /* WallAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppTests.swift; sourceTree = "<group>"; };
+		D547BF2E2ADE16310006D2B4 /* WallAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WallAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D547BF322ADE16310006D2B4 /* WallAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppUITests.swift; sourceTree = "<group>"; };
+		D547BF342ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D547BF4C2ADE16CC0006D2B4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D547BF112ADE162F0006D2B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D547BF212ADE16310006D2B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D547BF2B2ADE16310006D2B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D547BF0B2ADE162F0006D2B4 = {
+			isa = PBXGroup;
+			children = (
+				D547BF162ADE162F0006D2B4 /* WallApp */,
+				D547BF272ADE16310006D2B4 /* WallAppTests */,
+				D547BF312ADE16310006D2B4 /* WallAppUITests */,
+				D547BF152ADE162F0006D2B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D547BF152ADE162F0006D2B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF142ADE162F0006D2B4 /* WallApp.app */,
+				D547BF242ADE16310006D2B4 /* WallAppTests.xctest */,
+				D547BF2E2ADE16310006D2B4 /* WallAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D547BF162ADE162F0006D2B4 /* WallApp */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF482ADE16610006D2B4 /* App */,
+				D547BF472ADE16590006D2B4 /* Core */,
+				D547BF462ADE16580006D2B4 /* Extensions */,
+				D547BF452ADE16560006D2B4 /* Model */,
+				D547BF442ADE16540006D2B4 /* Services */,
+				D547BF412ADE16420006D2B4 /* Utilities */,
+				D547BF192ADE162F0006D2B4 /* ContentView.swift */,
+				D547BF1B2ADE16310006D2B4 /* Assets.xcassets */,
+				D547BF1D2ADE16310006D2B4 /* Preview Content */,
+			);
+			path = WallApp;
+			sourceTree = "<group>";
+		};
+		D547BF1D2ADE16310006D2B4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF1E2ADE16310006D2B4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		D547BF272ADE16310006D2B4 /* WallAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF282ADE16310006D2B4 /* WallAppTests.swift */,
+			);
+			path = WallAppTests;
+			sourceTree = "<group>";
+		};
+		D547BF312ADE16310006D2B4 /* WallAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF322ADE16310006D2B4 /* WallAppUITests.swift */,
+				D547BF342ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift */,
+			);
+			path = WallAppUITests;
+			sourceTree = "<group>";
+		};
+		D547BF412ADE16420006D2B4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D547BF442ADE16540006D2B4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D547BF452ADE16560006D2B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D547BF462ADE16580006D2B4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D547BF472ADE16590006D2B4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF4A2ADE16A10006D2B4 /* Authentication */,
+				D547BF492ADE169F0006D2B4 /* Root */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		D547BF482ADE16610006D2B4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF172ADE162F0006D2B4 /* WallAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		D547BF492ADE169F0006D2B4 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		D547BF4A2ADE16A10006D2B4 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF4B2ADE16BD0006D2B4 /* Views */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D547BF4B2ADE16BD0006D2B4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF4C2ADE16CC0006D2B4 /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D547BF132ADE162F0006D2B4 /* WallApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D547BF382ADE16310006D2B4 /* Build configuration list for PBXNativeTarget "WallApp" */;
+			buildPhases = (
+				D547BF102ADE162F0006D2B4 /* Sources */,
+				D547BF112ADE162F0006D2B4 /* Frameworks */,
+				D547BF122ADE162F0006D2B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WallApp;
+			productName = WallApp;
+			productReference = D547BF142ADE162F0006D2B4 /* WallApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D547BF232ADE16310006D2B4 /* WallAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D547BF3B2ADE16310006D2B4 /* Build configuration list for PBXNativeTarget "WallAppTests" */;
+			buildPhases = (
+				D547BF202ADE16310006D2B4 /* Sources */,
+				D547BF212ADE16310006D2B4 /* Frameworks */,
+				D547BF222ADE16310006D2B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D547BF262ADE16310006D2B4 /* PBXTargetDependency */,
+			);
+			name = WallAppTests;
+			productName = WallAppTests;
+			productReference = D547BF242ADE16310006D2B4 /* WallAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D547BF2D2ADE16310006D2B4 /* WallAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D547BF3E2ADE16310006D2B4 /* Build configuration list for PBXNativeTarget "WallAppUITests" */;
+			buildPhases = (
+				D547BF2A2ADE16310006D2B4 /* Sources */,
+				D547BF2B2ADE16310006D2B4 /* Frameworks */,
+				D547BF2C2ADE16310006D2B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D547BF302ADE16310006D2B4 /* PBXTargetDependency */,
+			);
+			name = WallAppUITests;
+			productName = WallAppUITests;
+			productReference = D547BF2E2ADE16310006D2B4 /* WallAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D547BF0C2ADE162F0006D2B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					D547BF132ADE162F0006D2B4 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+					D547BF232ADE16310006D2B4 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = D547BF132ADE162F0006D2B4;
+					};
+					D547BF2D2ADE16310006D2B4 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = D547BF132ADE162F0006D2B4;
+					};
+				};
+			};
+			buildConfigurationList = D547BF0F2ADE162F0006D2B4 /* Build configuration list for PBXProject "WallApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D547BF0B2ADE162F0006D2B4;
+			productRefGroup = D547BF152ADE162F0006D2B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D547BF132ADE162F0006D2B4 /* WallApp */,
+				D547BF232ADE16310006D2B4 /* WallAppTests */,
+				D547BF2D2ADE16310006D2B4 /* WallAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D547BF122ADE162F0006D2B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D547BF1F2ADE16310006D2B4 /* Preview Assets.xcassets in Resources */,
+				D547BF1C2ADE16310006D2B4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D547BF222ADE16310006D2B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D547BF2C2ADE16310006D2B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D547BF102ADE162F0006D2B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D547BF4D2ADE16CC0006D2B4 /* LoginView.swift in Sources */,
+				D547BF1A2ADE162F0006D2B4 /* ContentView.swift in Sources */,
+				D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D547BF202ADE16310006D2B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D547BF292ADE16310006D2B4 /* WallAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D547BF2A2ADE16310006D2B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D547BF352ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift in Sources */,
+				D547BF332ADE16310006D2B4 /* WallAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D547BF262ADE16310006D2B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D547BF132ADE162F0006D2B4 /* WallApp */;
+			targetProxy = D547BF252ADE16310006D2B4 /* PBXContainerItemProxy */;
+		};
+		D547BF302ADE16310006D2B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D547BF132ADE162F0006D2B4 /* WallApp */;
+			targetProxy = D547BF2F2ADE16310006D2B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D547BF362ADE16310006D2B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D547BF372ADE16310006D2B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D547BF392ADE16310006D2B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WallApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 983DFYNW3R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juansaad.WallApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D547BF3A2ADE16310006D2B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WallApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 983DFYNW3R;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juansaad.WallApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D547BF3C2ADE16310006D2B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 983DFYNW3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juansaad.WallAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WallApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WallApp";
+			};
+			name = Debug;
+		};
+		D547BF3D2ADE16310006D2B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 983DFYNW3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juansaad.WallAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WallApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WallApp";
+			};
+			name = Release;
+		};
+		D547BF3F2ADE16310006D2B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 983DFYNW3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juansaad.WallAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WallApp;
+			};
+			name = Debug;
+		};
+		D547BF402ADE16310006D2B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 983DFYNW3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juansaad.WallAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WallApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D547BF0F2ADE162F0006D2B4 /* Build configuration list for PBXProject "WallApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D547BF362ADE16310006D2B4 /* Debug */,
+				D547BF372ADE16310006D2B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D547BF382ADE16310006D2B4 /* Build configuration list for PBXNativeTarget "WallApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D547BF392ADE16310006D2B4 /* Debug */,
+				D547BF3A2ADE16310006D2B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D547BF3B2ADE16310006D2B4 /* Build configuration list for PBXNativeTarget "WallAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D547BF3C2ADE16310006D2B4 /* Debug */,
+				D547BF3D2ADE16310006D2B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D547BF3E2ADE16310006D2B4 /* Build configuration list for PBXNativeTarget "WallAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D547BF3F2ADE16310006D2B4 /* Debug */,
+				D547BF402ADE16310006D2B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D547BF0C2ADE162F0006D2B4 /* Project object */;
+}
