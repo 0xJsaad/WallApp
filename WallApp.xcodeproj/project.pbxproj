@@ -25,6 +25,8 @@
 		D547BF672ADE2D2B0006D2B4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */; };
 		D547BF6D2ADE2E880006D2B4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */; };
 		D547BF6F2ADE31CA0006D2B4 /* ThreadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF6E2ADE31CA0006D2B4 /* ThreadCell.swift */; };
+		D547BF722ADE3ECA0006D2B4 /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF712ADE3ECA0006D2B4 /* CircularProfileImageView.swift */; };
+		D547BF742ADE3F6B0006D2B4 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF732ADE3F6B0006D2B4 /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		D547BF6E2ADE31CA0006D2B4 /* ThreadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadCell.swift; sourceTree = "<group>"; };
+		D547BF712ADE3ECA0006D2B4 /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
+		D547BF732ADE3F6B0006D2B4 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 		D547BF472ADE16590006D2B4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D547BF702ADE3EAD0006D2B4 /* Components */,
 				D547BF682ADE2E1D0006D2B4 /* Activity */,
 				D547BF4A2ADE16A10006D2B4 /* Authentication */,
 				D547BF5C2ADE2C7F0006D2B4 /* Explore */,
@@ -328,6 +333,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D547BF702ADE3EAD0006D2B4 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF712ADE3ECA0006D2B4 /* CircularProfileImageView.swift */,
+				D547BF732ADE3F6B0006D2B4 /* UserCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -465,6 +479,8 @@
 				D547BF1A2ADE162F0006D2B4 /* ContentView.swift in Sources */,
 				D547BF6D2ADE2E880006D2B4 /* ActivityView.swift in Sources */,
 				D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */,
+				D547BF722ADE3ECA0006D2B4 /* CircularProfileImageView.swift in Sources */,
+				D547BF742ADE3F6B0006D2B4 /* UserCell.swift in Sources */,
 				D547BF522ADE21CF0006D2B4 /* WallAppTextFieldModifiers.swift in Sources */,
 				D547BF6F2ADE31CA0006D2B4 /* ThreadCell.swift in Sources */,
 				D547BF542ADE237E0006D2B4 /* WallAppButtonModifier.swift in Sources */,
