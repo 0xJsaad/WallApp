@@ -15,6 +15,9 @@
 		D547BF332ADE16310006D2B4 /* WallAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF322ADE16310006D2B4 /* WallAppUITests.swift */; };
 		D547BF352ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF342ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift */; };
 		D547BF4D2ADE16CC0006D2B4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF4C2ADE16CC0006D2B4 /* LoginView.swift */; };
+		D547BF4F2ADE20110006D2B4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF4E2ADE20110006D2B4 /* RegistrationView.swift */; };
+		D547BF522ADE21CF0006D2B4 /* WallAppTextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF512ADE21CE0006D2B4 /* WallAppTextFieldModifiers.swift */; };
+		D547BF542ADE237E0006D2B4 /* WallAppButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF532ADE237E0006D2B4 /* WallAppButtonModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		D547BF322ADE16310006D2B4 /* WallAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppUITests.swift; sourceTree = "<group>"; };
 		D547BF342ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D547BF4C2ADE16CC0006D2B4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D547BF4E2ADE20110006D2B4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
+		D547BF512ADE21CE0006D2B4 /* WallAppTextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppTextFieldModifiers.swift; sourceTree = "<group>"; };
+		D547BF532ADE237E0006D2B4 /* WallAppButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppButtonModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 		D547BF412ADE16420006D2B4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D547BF502ADE21AB0006D2B4 /* ViewModifiers */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -198,8 +205,18 @@
 			isa = PBXGroup;
 			children = (
 				D547BF4C2ADE16CC0006D2B4 /* LoginView.swift */,
+				D547BF4E2ADE20110006D2B4 /* RegistrationView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D547BF502ADE21AB0006D2B4 /* ViewModifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF512ADE21CE0006D2B4 /* WallAppTextFieldModifiers.swift */,
+				D547BF532ADE237E0006D2B4 /* WallAppButtonModifier.swift */,
+			);
+			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +352,9 @@
 				D547BF4D2ADE16CC0006D2B4 /* LoginView.swift in Sources */,
 				D547BF1A2ADE162F0006D2B4 /* ContentView.swift in Sources */,
 				D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */,
+				D547BF522ADE21CF0006D2B4 /* WallAppTextFieldModifiers.swift in Sources */,
+				D547BF542ADE237E0006D2B4 /* WallAppButtonModifier.swift in Sources */,
+				D547BF4F2ADE20110006D2B4 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
