@@ -18,6 +18,12 @@
 		D547BF4F2ADE20110006D2B4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF4E2ADE20110006D2B4 /* RegistrationView.swift */; };
 		D547BF522ADE21CF0006D2B4 /* WallAppTextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF512ADE21CE0006D2B4 /* WallAppTextFieldModifiers.swift */; };
 		D547BF542ADE237E0006D2B4 /* WallAppButtonModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF532ADE237E0006D2B4 /* WallAppButtonModifier.swift */; };
+		D547BF572ADE29B60006D2B4 /* WallAppTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF562ADE29B60006D2B4 /* WallAppTabView.swift */; };
+		D547BF5B2ADE2C0C0006D2B4 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF5A2ADE2C0C0006D2B4 /* FeedView.swift */; };
+		D547BF5F2ADE2C920006D2B4 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF5E2ADE2C920006D2B4 /* ExploreView.swift */; };
+		D547BF632ADE2D030006D2B4 /* CreateThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF622ADE2D030006D2B4 /* CreateThreadView.swift */; };
+		D547BF672ADE2D2B0006D2B4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */; };
+		D547BF6D2ADE2E880006D2B4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,12 @@
 		D547BF4E2ADE20110006D2B4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		D547BF512ADE21CE0006D2B4 /* WallAppTextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppTextFieldModifiers.swift; sourceTree = "<group>"; };
 		D547BF532ADE237E0006D2B4 /* WallAppButtonModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppButtonModifier.swift; sourceTree = "<group>"; };
+		D547BF562ADE29B60006D2B4 /* WallAppTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppTabView.swift; sourceTree = "<group>"; };
+		D547BF5A2ADE2C0C0006D2B4 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		D547BF5E2ADE2C920006D2B4 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		D547BF622ADE2D030006D2B4 /* CreateThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThreadView.swift; sourceTree = "<group>"; };
+		D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,8 +184,14 @@
 		D547BF472ADE16590006D2B4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				D547BF682ADE2E1D0006D2B4 /* Activity */,
 				D547BF4A2ADE16A10006D2B4 /* Authentication */,
+				D547BF5C2ADE2C7F0006D2B4 /* Explore */,
+				D547BF582ADE2BFA0006D2B4 /* Feed */,
+				D547BF642ADE2D0C0006D2B4 /* Profile */,
 				D547BF492ADE169F0006D2B4 /* Root */,
+				D547BF602ADE2CDA0006D2B4 /* ThreadCreation */,
+				D547BF552ADE29870006D2B4 /* TabBar */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -217,6 +235,94 @@
 				D547BF532ADE237E0006D2B4 /* WallAppButtonModifier.swift */,
 			);
 			path = ViewModifiers;
+			sourceTree = "<group>";
+		};
+		D547BF552ADE29870006D2B4 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF562ADE29B60006D2B4 /* WallAppTabView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		D547BF582ADE2BFA0006D2B4 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF592ADE2BFF0006D2B4 /* View */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		D547BF592ADE2BFF0006D2B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF5A2ADE2C0C0006D2B4 /* FeedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D547BF5C2ADE2C7F0006D2B4 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF5D2ADE2C850006D2B4 /* View */,
+			);
+			path = Explore;
+			sourceTree = "<group>";
+		};
+		D547BF5D2ADE2C850006D2B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF5E2ADE2C920006D2B4 /* ExploreView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D547BF602ADE2CDA0006D2B4 /* ThreadCreation */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF612ADE2CE20006D2B4 /* View */,
+			);
+			path = ThreadCreation;
+			sourceTree = "<group>";
+		};
+		D547BF612ADE2CE20006D2B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF622ADE2D030006D2B4 /* CreateThreadView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D547BF642ADE2D0C0006D2B4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF652ADE2D1E0006D2B4 /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		D547BF652ADE2D1E0006D2B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF662ADE2D2B0006D2B4 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D547BF682ADE2E1D0006D2B4 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF692ADE2E2A0006D2B4 /* View */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		D547BF692ADE2E2A0006D2B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF6C2ADE2E880006D2B4 /* ActivityView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -349,11 +455,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D547BF632ADE2D030006D2B4 /* CreateThreadView.swift in Sources */,
+				D547BF5B2ADE2C0C0006D2B4 /* FeedView.swift in Sources */,
+				D547BF5F2ADE2C920006D2B4 /* ExploreView.swift in Sources */,
 				D547BF4D2ADE16CC0006D2B4 /* LoginView.swift in Sources */,
 				D547BF1A2ADE162F0006D2B4 /* ContentView.swift in Sources */,
+				D547BF6D2ADE2E880006D2B4 /* ActivityView.swift in Sources */,
 				D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */,
 				D547BF522ADE21CF0006D2B4 /* WallAppTextFieldModifiers.swift in Sources */,
 				D547BF542ADE237E0006D2B4 /* WallAppButtonModifier.swift in Sources */,
+				D547BF572ADE29B60006D2B4 /* WallAppTabView.swift in Sources */,
+				D547BF672ADE2D2B0006D2B4 /* ProfileView.swift in Sources */,
 				D547BF4F2ADE20110006D2B4 /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
