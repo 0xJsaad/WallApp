@@ -51,15 +51,14 @@ struct WallAppTabView: View {
                 .onAppear() { selectedTab = 4}
                 .tag(4)
         }
-        .onChange(of: selectedTab) {
-            showCreatedWallView = $0 == 2
-        }
+        .onChange(of: selectedTab, perform: { newValue in
+            showCreatedWallView = selectedTab == 2
+        })
         .sheet(isPresented: $showCreatedWallView, onDismiss: {
             selectedTab = 0
         }, content: {
             CreateWallView()
         })
-
         .tint(.purple)
     }
 }

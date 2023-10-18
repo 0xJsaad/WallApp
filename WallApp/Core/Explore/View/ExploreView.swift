@@ -20,7 +20,7 @@ struct ExploreView: View {
                             
                             Divider()
                         }
-                        .padding(.vertical, 4)
+                        .padding(.horizontal, 14)
                     }
                 }
             }

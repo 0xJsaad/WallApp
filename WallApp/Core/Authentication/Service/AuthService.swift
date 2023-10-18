@@ -19,13 +19,20 @@ class AuthService {
     
     @MainActor
     func login(withEmail email: String, password: String) async throws {
-        
+        do {
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            self.userSession = result.user
+            print("DEBUG: User signed in \(result.user.uid)")
+        } catch {
+            print("DEBUG: Failed to signin user with error \(error.localizedDescription)")
+        }
     }
     
     @MainActor
     func createUser(withEmail email: String, password: String, fullname: String, username: String) async throws {
         do {
             let result = try await Auth.auth().createUser(withEmail: email, password: password)
+            self.userSession = result.user
             print("DEBUG: Created user \(result.user.uid)")
         } catch {
             print("DEBUG: Failed to create user with error \(error.localizedDescription)")
@@ -36,11 +43,16 @@ class AuthService {
     func signInAnonymously() async throws {
         do {
             let result = try await Auth.auth().signInAnonymously()
+            self.userSession = result.user
             print("DEBUG: Signed in anonymously with UID \(result.user.uid)")
         } catch {
             print("DEBUG: Failed to sign in anonymously with error \(error.localizedDescription)")
             throw error
         }
+    }
+    func signOut() {
+        try? Auth.auth().signOut() // signs out on backend firebase
+        self.userSession = nil // this removes session locally and updates routing
     }
 }
 

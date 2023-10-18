@@ -32,7 +32,7 @@ struct UserCell: View {
                         .stroke(Color(.purple), lineWidth: 1)
                 }
         }
-        .padding(.horizontal)
+        .padding(.vertical)
     }
 }
 

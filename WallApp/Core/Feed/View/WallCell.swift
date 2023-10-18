@@ -17,7 +17,7 @@ struct WallCell: View {
                     HStack {
                         Text ("leomessi_10")
                             .font(.footnote)
-                        .fontWeight(.semibold)
+                            .fontWeight(.semibold)
                         
                         Spacer()
                         

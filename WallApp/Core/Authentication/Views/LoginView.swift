@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email = ""
-    @State private var password = ""
-    @State private var navigationToFeedView = false
+    @StateObject var viewModel = LoginViewModel()
+    
     
     var body: some View {
         NavigationStack {
@@ -24,11 +23,11 @@ struct LoginView: View {
                     .padding()
                 
                 VStack {
-                    TextField("Enter your email", text: $email)
+                    TextField("Enter your email", text: $viewModel.email)
                         .autocapitalization(.none)
                         .modifier(WallAppTextFieldModifiers())
                     
-                    SecureField("Enter your password", text: $password)
+                    SecureField("Enter your password", text: $viewModel.password)
                         .modifier(WallAppTextFieldModifiers())
                 }
                 
@@ -48,7 +47,6 @@ struct LoginView: View {
                     Task {
                         do {
                             try await AuthService.shared.signInAnonymously()
-                            navigationToFeedView = true
                         } catch {
                             // Handle the error
                         }
@@ -57,11 +55,9 @@ struct LoginView: View {
                     Text("Stay Anonymously")
                         .modifier(AnonymousLoginButton())
                 }
-                NavigationLink("", destination: FeedView(), isActive: $navigationToFeedView)
-
                 // regular login
                 Button {
-                    
+                    Task { try await viewModel.login() }
                 } label: {
                     Text("Login")
                         .modifier(WallAppButtonModifier())
