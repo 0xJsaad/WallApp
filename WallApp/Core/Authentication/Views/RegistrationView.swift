@@ -24,6 +24,7 @@ struct RegistrationView: View {
             
             VStack {
                 TextField("Enter your email", text: $viewModel.email)
+                    .autocapitalization(.none)
                     .modifier(WallAppTextFieldModifiers())
                 
                 SecureField("Enter your password", text: $viewModel.password)
@@ -33,6 +34,7 @@ struct RegistrationView: View {
                     .modifier(WallAppTextFieldModifiers())
                 
                 TextField("Enter your username", text: $viewModel.username)
+                    .autocapitalization(.none)
                     .modifier(WallAppTextFieldModifiers())
             }
             
