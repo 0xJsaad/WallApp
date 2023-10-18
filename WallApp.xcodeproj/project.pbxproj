@@ -34,6 +34,8 @@
 		D547BF842ADF2CB10006D2B4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = D547BF832ADF2CB10006D2B4 /* FirebaseFirestore */; };
 		D547BF862ADF2CB10006D2B4 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D547BF852ADF2CB10006D2B4 /* FirebaseFirestoreSwift */; };
 		D547BF882ADF2CB10006D2B4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D547BF872ADF2CB10006D2B4 /* FirebaseStorage */; };
+		D547BF8D2ADF33870006D2B4 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF8C2ADF33870006D2B4 /* RegistrationViewModel.swift */; };
+		D547BF902ADF345D0006D2B4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF8F2ADF345C0006D2B4 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		D547BF782ADE49340006D2B4 /* ProfileWallFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileWallFilter.swift; sourceTree = "<group>"; };
 		D547BF7C2ADE50EF0006D2B4 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		D547BF7E2ADF2C120006D2B4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D547BF8C2ADF33870006D2B4 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		D547BF8F2ADF345C0006D2B4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +145,6 @@
 				D547BF452ADE16560006D2B4 /* Model */,
 				D547BF442ADE16540006D2B4 /* Services */,
 				D547BF412ADE16420006D2B4 /* Utilities */,
-				D547BF192ADE162F0006D2B4 /* ContentView.swift */,
 				D547BF1B2ADE16310006D2B4 /* Assets.xcassets */,
 				D547BF1D2ADE16310006D2B4 /* Preview Content */,
 			);
@@ -212,8 +215,8 @@
 				D547BF582ADE2BFA0006D2B4 /* Feed */,
 				D547BF642ADE2D0C0006D2B4 /* Profile */,
 				D547BF492ADE169F0006D2B4 /* Root */,
-				D547BF602ADE2CDA0006D2B4 /* WallCreation */,
 				D547BF552ADE29870006D2B4 /* TabBar */,
+				D547BF602ADE2CDA0006D2B4 /* WallCreation */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 		D547BF492ADE169F0006D2B4 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				D547BF192ADE162F0006D2B4 /* ContentView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -236,7 +240,9 @@
 		D547BF4A2ADE16A10006D2B4 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				D547BF8B2ADF33480006D2B4 /* Service */,
 				D547BF4B2ADE16BD0006D2B4 /* Views */,
+				D547BF8A2ADF33400006D2B4 /* ViewModel */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -383,6 +389,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D547BF8A2ADF33400006D2B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF8C2ADF33870006D2B4 /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D547BF8B2ADF33480006D2B4 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				D547BF8F2ADF345C0006D2B4 /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -524,10 +546,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D547BF632ADE2D030006D2B4 /* CreateWallView.swift in Sources */,
+				D547BF8D2ADF33870006D2B4 /* RegistrationViewModel.swift in Sources */,
 				D547BF7D2ADE50EF0006D2B4 /* EditProfileView.swift in Sources */,
 				D547BF5B2ADE2C0C0006D2B4 /* FeedView.swift in Sources */,
 				D547BF5F2ADE2C920006D2B4 /* ExploreView.swift in Sources */,
 				D547BF4D2ADE16CC0006D2B4 /* LoginView.swift in Sources */,
+				D547BF902ADF345D0006D2B4 /* AuthService.swift in Sources */,
 				D547BF1A2ADE162F0006D2B4 /* ContentView.swift in Sources */,
 				D547BF6D2ADE2E880006D2B4 /* ActivityView.swift in Sources */,
 				D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */,
@@ -716,6 +740,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "\"-Xlinker -no_warn_duplicate_libraries\"";
+				"OTHER_LDFLAGS[arch=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juansaad.WallApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -745,6 +771,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.juansaad.WallApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

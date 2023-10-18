@@ -10,6 +10,8 @@ import SwiftUI
 struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
+    @State private var navigationToFeedView = false
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -41,7 +43,23 @@ struct LoginView: View {
                         .foregroundColor(.primary)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-                 
+                // anonymous login
+                Button {
+                    Task {
+                        do {
+                            try await AuthService.shared.signInAnonymously()
+                            navigationToFeedView = true
+                        } catch {
+                            // Handle the error
+                        }
+                    }
+                } label: {
+                    Text("Stay Anonymously")
+                        .modifier(AnonymousLoginButton())
+                }
+                NavigationLink("", destination: FeedView(), isActive: $navigationToFeedView)
+
+                // regular login
                 Button {
                     
                 } label: {
