@@ -9,9 +9,14 @@ import Foundation
 import Combine
 import FirebaseAuth
 
+
 class ContentViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     private var cancellables = Set<AnyCancellable>()
+    
+    var isUserAnonymous: Bool {
+           return userSession?.isAnonymous ?? false
+       }
     
     init() {
         setupSuscribers()

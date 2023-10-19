@@ -11,100 +11,126 @@ struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
     @State private var selectedFilter: ProfileWallFilter = .walls
     @Namespace var animation
+    
+    private var currentUser: User? {
+        return viewModel.currentUser
+    }
+    
+    // Check if the user is anonymous
+    private var isUserAnonymous: Bool {
+        AuthService.shared.isUserAnonymous
+    }
+    
+    // State to activate NavigationLink
+    @State private var redirectToSignUp: Bool = false
+    
     var body: some View {
-        NavigationStack {
-            ScrollView(showsIndicators: false) {
-                // bio and stats
-                VStack(spacing: 10) {
-                    HStack(alignment: .top) {
-                        VStack(alignment: .leading, spacing: 12) {
-                            // fullname and username
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text("Leo Messi")
-                                    .font(.title2)
-                                    .fontWeight(.semibold)
+        NavigationView {
+            //If is anonymouys, prompt log in
+            if isUserAnonymous {
+                NavigationLink("", destination: RegistrationView(), isActive: $redirectToSignUp)
+                    .onAppear {
+                        redirectToSignUp = true
+                    }
+            } else {
+                NavigationStack {
+                    ScrollView(showsIndicators: false) {
+                        // bio and stats
+                        VStack(spacing: 20) {
+                            HStack(alignment: .top) {
+                                VStack(alignment: .leading, spacing: 12) {
+                                    // fullname and username
+                                    VStack(alignment: .leading, spacing: 4) {
+                                        Text(currentUser?.fullname ?? "")
+                                            .font(.title2)
+                                            .fontWeight(.semibold)
+                                        
+                                        Text(currentUser?.username ?? "")
+                                            .font(.subheadline)
+                                    }
+                                    
+                                    if let bio = currentUser?.bio {
+                                        Text(bio)
+                                            .font(.footnote)
+                                    }
+                                    
+                                    Text("2 followers")
+                                        .font(.caption)
+                                        .foregroundColor(.gray)
+                                }
                                 
-                                Text("leomessi_10")
-                                    .font(.subheadline)
+                                Spacer()
+                                
+                                CircularProfileImageView()
                             }
                             
-                            Text("Campeones del mundo!!")
-                                .font(.footnote)
+                            Button {
+                                
+                            } label: {
+                                Text("Follow")
+                                    .font(.subheadline)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.primary)
+                                    .frame(width: 352, height: 32)
+                                    .background(.purple)
+                                    .cornerRadius(8)
+                            }
                             
-                            Text("2 followers")
-                                .font(.caption)
-                                .foregroundColor(.gray)
+                            // user content list view
+                            VStack {
+                                HStack {
+                                    ForEach(ProfileWallFilter.allCases) { filter in
+                                        VStack {
+                                            Text(filter.title)
+                                                .font(.subheadline)
+                                                .fontWeight(selectedFilter == filter ? .semibold :
+                                                        .regular)
+                                            
+                                            if selectedFilter == filter {
+                                                Rectangle()
+                                                    .foregroundColor(.purple)
+                                                    .frame(width: 180, height: 1)
+                                                    .matchedGeometryEffect(id: "item", in: animation)
+                                                
+                                                
+                                            } else {
+                                                Rectangle()
+                                                    .foregroundColor(.clear)
+                                                    .frame(width: 180, height: 1)
+                                            }
+                                            
+                                        }
+                                        .onTapGesture {
+                                            withAnimation(.spring()) {
+                                                selectedFilter = filter
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                
+                                LazyVStack {
+                                    ForEach(0 ... 10, id: \.self) { wall in
+                                        WallCell()
+                                    }
+                                }
+                            }
+                            .padding(.vertical, 8)
+                            
                         }
-                        .padding(.horizontal, 8)
-                        Spacer()
-                        
-                        CircularProfileImageView()
+                    }
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button {
+                                AuthService.shared.signOut()
+                            } label: {
+                                Image(systemName: "figure.walk.departure")
+                                    .foregroundColor(.purple)
+                            }
+                            
+                        }
                     }
                     .padding(.horizontal)
-                    
-                    Button {
-                        
-                    } label: {
-                        Text("Follow")
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.primary)
-                            .frame(width: 352, height: 32)
-                            .background(.purple)
-                            .cornerRadius(8)
-                    }
-                    
-                    // user content list view
-                    VStack {
-                        HStack {
-                            ForEach(ProfileWallFilter.allCases) { filter in
-                                VStack {
-                                    Text(filter.title)
-                                        .font(.subheadline)
-                                        .fontWeight(selectedFilter == filter ? .semibold : .regular)
-                                    
-                                    if selectedFilter == filter {
-                                        Rectangle()
-                                            .foregroundColor(.purple)
-                                            .frame(width: 180, height: 1)
-                                            .matchedGeometryEffect(id: "item", in: animation)
-                                        
-                                        
-                                    } else {
-                                        Rectangle()
-                                            .foregroundColor(.clear)
-                                            .frame(width: 180, height: 1)
-                                    }
-                                    
-                                }
-                                .onTapGesture {
-                                    withAnimation(.spring()) {
-                                        selectedFilter = filter
-                                    }
-                                }
-                            }
-                        }
-                        
-                        
-                        LazyVStack {
-                            ForEach(0 ... 10, id: \.self) { wall in
-                                WallCell()
-                            }
-                        }
-                    }
-                    .padding(.vertical, 8)
-                    
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        AuthService.shared.signOut()
-                    } label: {
-                        Image(systemName: "figure.walk.departure")
-                            .foregroundColor(.purple)
-                    }
-                    
                 }
             }
         }

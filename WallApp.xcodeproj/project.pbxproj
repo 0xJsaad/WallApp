@@ -41,6 +41,7 @@
 		D55422312AE07E780092A61E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55422302AE07E780092A61E /* User.swift */; };
 		D55422332AE084510092A61E /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55422322AE084510092A61E /* UserService.swift */; };
 		D55422362AE0859F0092A61E /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55422352AE0859F0092A61E /* ProfileViewModel.swift */; };
+		D55422382AE0A08D0092A61E /* AnonymousAccessToTabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55422372AE0A08D0092A61E /* AnonymousAccessToTabs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		D55422302AE07E780092A61E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D55422322AE084510092A61E /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		D55422352AE0859F0092A61E /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		D55422372AE0A08D0092A61E /* AnonymousAccessToTabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousAccessToTabs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,10 +130,10 @@
 		D547BF0B2ADE162F0006D2B4 = {
 			isa = PBXGroup;
 			children = (
-				D547BF7E2ADF2C120006D2B4 /* GoogleService-Info.plist */,
 				D547BF162ADE162F0006D2B4 /* WallApp */,
 				D547BF272ADE16310006D2B4 /* WallAppTests */,
 				D547BF312ADE16310006D2B4 /* WallAppUITests */,
+				D547BF7E2ADF2C120006D2B4 /* GoogleService-Info.plist */,
 				D547BF152ADE162F0006D2B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -265,6 +267,7 @@
 			children = (
 				D547BF4C2ADE16CC0006D2B4 /* LoginView.swift */,
 				D547BF4E2ADE20110006D2B4 /* RegistrationView.swift */,
+				D55422372AE0A08D0092A61E /* AnonymousAccessToTabs.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D55422382AE0A08D0092A61E /* AnonymousAccessToTabs.swift in Sources */,
 				D547BF632ADE2D030006D2B4 /* CreateWallView.swift in Sources */,
 				D547BF8D2ADF33870006D2B4 /* RegistrationViewModel.swift in Sources */,
 				D547BF7D2ADE50EF0006D2B4 /* EditProfileView.swift in Sources */,

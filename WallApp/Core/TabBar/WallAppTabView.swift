@@ -10,6 +10,9 @@ import SwiftUI
 struct WallAppTabView: View {
     @State private var selectedTab = 0
     @State private var showCreatedWallView = false
+    @State private var showAnonymousTab = false
+    @EnvironmentObject var viewModel: ContentViewModel
+
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -21,7 +24,7 @@ struct WallAppTabView: View {
                 .onAppear() { selectedTab = 0}
                 .tag(0)
             
-            ExploreView()
+            (selectedTab == 1 ? AnyView(AnonymousAccessToTabs()) : AnyView(ExploreView()))
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                 }
@@ -35,7 +38,7 @@ struct WallAppTabView: View {
                 .onAppear() { selectedTab = 2}
                 .tag(2)
             
-            ActivityView()
+            (selectedTab == 3 ? AnyView(AnonymousAccessToTabs()) : AnyView(ActivityView()))
                 .tabItem {
                     Image(systemName: selectedTab == 3 ? "heart.fill" : "heart")
                         .environment(\.symbolVariants, selectedTab == 3 ? .fill : .none)
@@ -43,7 +46,7 @@ struct WallAppTabView: View {
                 .onAppear() { selectedTab = 3}
                 .tag(3)
             
-            ProfileView()
+            (selectedTab == 4 ? AnyView(AnonymousAccessToTabs()) : AnyView(ProfileView()))
                 .tabItem {
                     Image(systemName: selectedTab == 4 ? "person.fill" : "person")
                         .environment(\.symbolVariants, selectedTab == 4 ? .fill : .none)
@@ -52,7 +55,19 @@ struct WallAppTabView: View {
                 .tag(4)
         }
         .onChange(of: selectedTab, perform: { newValue in
-            showCreatedWallView = selectedTab == 2
+            if newValue == 2 {
+                if viewModel.isUserAnonymous {
+                    showAnonymousTab = true
+                } else {
+                    showCreatedWallView = true
+                }
+            }
+        })
+
+        .sheet(isPresented: $showAnonymousTab, onDismiss: {
+            selectedTab = 0
+        }, content: {
+            AnonymousAccessToTabs()
         })
         .sheet(isPresented: $showCreatedWallView, onDismiss: {
             selectedTab = 0
@@ -64,5 +79,6 @@ struct WallAppTabView: View {
 }
 
 #Preview {
-    WallAppTabView()
+    WallAppTabView().environmentObject(ContentViewModel())
+
 }

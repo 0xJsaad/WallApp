@@ -23,6 +23,7 @@ struct WallAppApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(ContentViewModel())
         }
     }
 }

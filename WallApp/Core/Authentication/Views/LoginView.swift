@@ -9,7 +9,8 @@ import SwiftUI
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
-    
+    @State private var didAttemtAnonymousLogin = false
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
         NavigationStack {
@@ -43,42 +44,47 @@ struct LoginView: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 // anonymous login
-                Button {
-                    Task {
-                        do {
-                            try await AuthService.shared.signInAnonymously()
-                        } catch {
-                            // Handle the error
+                if !didAttemtAnonymousLogin {
+                    Button {
+                        Task {
+                            do {
+                                try await AuthService.shared.signInAnonymously()
+                                self.presentationMode.wrappedValue.dismiss()  // This line will pop the view
+                            } catch {
+                                // Handle the error
+                            }
                         }
+                    } label: {
+                        Text("Stay Anonymously")
+                            .modifier(AnonymousLoginButton())
                     }
-                } label: {
-                    Text("Stay Anonymously")
-                        .modifier(AnonymousLoginButton())
-                }
-                // regular login
-                Button {
-                    Task { try await viewModel.login() }
-                } label: {
-                    Text("Login")
-                        .modifier(WallAppButtonModifier())
-                }
-                
-                Spacer()
-                
-                Divider()
-                
-                NavigationLink {
-                    RegistrationView()
-                        .navigationBarBackButtonHidden(true)
-                } label: {
-                    HStack(spacing: 3) {
-                        Text("Don't have an account?")
-                        
-                        Text("Sign Up")
-                            .fontWeight(.semibold)
+                    // regular login
+                    Button {
+                        Task { try await viewModel.login() }
+                    } label: {
+                        Text("Login")
+                            .modifier(WallAppButtonModifier())
                     }
-                    .foregroundColor(.primary)
-                    .font(.footnote)
+                    
+                    Spacer()
+                    
+                    Divider()
+                    
+                    NavigationLink {
+                        RegistrationView()
+                            .navigationBarBackButtonHidden(true)
+                    } label: {
+                        HStack(spacing: 3) {
+                            Text("Don't have an account?")
+                            
+                            Text("Sign Up")
+                                .fontWeight(.semibold)
+                        }
+                        .foregroundColor(.primary)
+                        .font(.footnote)
+                    }
+                    .padding(.vertical, 16)
+                    
                 }
             }
         }
