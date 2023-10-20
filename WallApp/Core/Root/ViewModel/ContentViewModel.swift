@@ -13,9 +13,9 @@ import FirebaseAuth
 class ContentViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     private var cancellables = Set<AnyCancellable>()
-    
+    @Published var selectedTab: Int = 0
     var isUserAnonymous: Bool {
-           return userSession?.isAnonymous ?? false
+           return userSession?.isAnonymous ?? true
        }
     
     init() {

@@ -10,7 +10,7 @@ import SwiftUI
 struct RegistrationView: View {
     @StateObject var viewModel = RegistrationViewModel()
     @Environment(\.dismiss) var dismiss
-    
+
     var body: some View {
         
         VStack {

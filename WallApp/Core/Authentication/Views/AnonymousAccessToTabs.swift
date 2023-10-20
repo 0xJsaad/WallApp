@@ -8,7 +8,7 @@ import SwiftUI
 
 struct AnonymousAccessToTabs: View {
     @State private var scaleEffect: CGFloat = 1.0
-    @State private var navigateToLogin = false // To control navigation
+    @State private var navigateToLogin = false
     
     var body: some View {
         NavigationView {
@@ -35,7 +35,7 @@ struct AnonymousAccessToTabs: View {
                     Button(action: {
                         navigateToLogin = true
                     }) {
-                        Text("Sign Up / Log In")
+                        Text("Create Account") // Updated button text
                             .font(.headline)
                             .padding()
                             .background(Color.purple)

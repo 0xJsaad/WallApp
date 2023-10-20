@@ -4,12 +4,11 @@
 //
 //  Created by 0xJs on 10/16/23.
 //
-
 import SwiftUI
 
 struct LoginView: View {
     @StateObject var viewModel = LoginViewModel()
-    @State private var didAttemtAnonymousLogin = false
+    @State private var navigateToFeed = false
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
@@ -43,13 +42,36 @@ struct LoginView: View {
                         .foregroundColor(.primary)
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
-                // anonymous login
-                if !didAttemtAnonymousLogin {
+                
+                // Anonymous login
+                if AuthService.shared.isUserAnonymous {
+                    Button {
+                        Task { try await viewModel.login() }
+                    } label: {
+                        Text("Login")
+                            .modifier(WallAppButtonModifier())
+                    }
+                    .padding(.top)
+                    
+                    NavigationLink {
+                        RegistrationView()
+                            .navigationBarBackButtonHidden(true)
+                    } label: {
+                        HStack(spacing: 3) {
+                            Text("Don't have an account?")
+                            Text("Sign Up")
+                                .fontWeight(.semibold)
+                        }
+                        .foregroundColor(.primary)
+                        .font(.footnote)
+                    }
+                    .padding(.vertical, 16)
+                } else {
                     Button {
                         Task {
                             do {
                                 try await AuthService.shared.signInAnonymously()
-                                self.presentationMode.wrappedValue.dismiss()  // This line will pop the view
+                                // No dismissal of the view for anonymous users
                             } catch {
                                 // Handle the error
                             }
@@ -58,13 +80,25 @@ struct LoginView: View {
                         Text("Stay Anonymously")
                             .modifier(AnonymousLoginButton())
                     }
-                    // regular login
+                    
+                    // Regular login
                     Button {
-                        Task { try await viewModel.login() }
+                        Task {
+                            do {
+                                try await viewModel.login()
+                                navigateToFeed = true  // This will trigger navigation to FeedView
+                            } catch {
+                                // Handle the error
+                            }
+                        }
                     } label: {
                         Text("Login")
                             .modifier(WallAppButtonModifier())
                     }
+                    
+                    // Hidden NavigationLink to the FeedView
+                    NavigationLink("", destination: FeedView(), isActive: $navigateToFeed)
+                        .hidden()
                     
                     Spacer()
                     
@@ -76,7 +110,6 @@ struct LoginView: View {
                     } label: {
                         HStack(spacing: 3) {
                             Text("Don't have an account?")
-                            
                             Text("Sign Up")
                                 .fontWeight(.semibold)
                         }
@@ -84,7 +117,6 @@ struct LoginView: View {
                         .font(.footnote)
                     }
                     .padding(.vertical, 16)
-                    
                 }
             }
         }

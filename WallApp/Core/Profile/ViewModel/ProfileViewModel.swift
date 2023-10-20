@@ -23,5 +23,8 @@ class ProfileViewModel: ObservableObject {
             print("DEBUG: User in view model from combine is \(String(describing: user))")
         }.store(in: &cancellables)
     }
+    func reset() {
+        self.currentUser = nil
+    }
 }
- 
+

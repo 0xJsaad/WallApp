@@ -4,6 +4,7 @@
 //
 //  Created by 0xJs on 10/18/23.
 //
+import FirebaseFirestore
 import Firebase
 import FirebaseFirestoreSwift
 
@@ -17,6 +18,7 @@ class UserService {
         
     }
     
+
     @MainActor
     func fetchCurrentUser() async throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -26,7 +28,6 @@ class UserService {
         
         print("DEBUG: user is \(user)")
     }
-    
     func reset() {
         self.currentUser = nil
     }
