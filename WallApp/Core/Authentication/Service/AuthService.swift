@@ -21,20 +21,13 @@ class AuthService {
     
     init() {
         self.userSession = Auth.auth().currentUser
-        if self.userSession == nil {
-            print("DEBUG: No active user session found. Attempting to sign in anonymously.")
-            Task {
-                do {
-                    try await signInAnonymously()
-                } catch {
-                    print("DEBUG: Failed to automatically sign in anonymously with error: \(error.localizedDescription)")
-                }
-            }
+        if let session = self.userSession {
+            print("DEBUG: Active user session found with UID \(session.uid)")
         } else {
-            print("DEBUG: Active user session found with UID \(self.userSession!.uid)")
+            print("DEBUG: No active user session found.")
         }
     }
-    
+
     
     @MainActor
     func login(withEmail email: String, password: String) async throws {
@@ -76,10 +69,10 @@ class AuthService {
     }
     
     func signOut() {
-        try? Auth.auth().signOut()
+        try? Auth.auth().signOut() //signs out on backend
         print("DEBUG: User signed out.")
-        self.userSession = nil
-        UserService.shared.reset()
+        self.userSession = nil // this removes session locally and updates routing
+        UserService.shared.reset() // sets current user object to nil.
     }
     
     
@@ -93,7 +86,7 @@ class AuthService {
         let user = User(id: id, fullname: fullname, email: email, username: username)
         guard let userData = try? Firestore.Encoder().encode(user) else { return }
         try await Firestore.firestore().collection("users").document(id).setData(userData)
-        try await UserService.shared.currentUser = user
+        UserService.shared.currentUser = user
     }
     
     /// Link anonymous account to an email

@@ -1,12 +1,12 @@
 //
-//  AnonymousAccessToTabs.swift
+//  AnonymousViews.swift
 //  WallApp
 //
 //  Created by 0xJs on 10/18/23.
 //
 import SwiftUI
 
-struct AnonymousAccessToTabs: View {
+struct AnonymousView: View {
     @State private var scaleEffect: CGFloat = 1.0
     @State private var navigateToLogin = false
     
@@ -31,7 +31,7 @@ struct AnonymousAccessToTabs: View {
 
                 Divider().padding(.horizontal)
             
-                NavigationLink(destination: LoginView(), isActive: $navigateToLogin) {
+                NavigationLink(destination: LoginView(presentedFromAnonymousView: true), isActive: $navigateToLogin) {
                     Button(action: {
                         navigateToLogin = true
                     }) {
@@ -51,5 +51,5 @@ struct AnonymousAccessToTabs: View {
 }
 
 #Preview {
-    AnonymousAccessToTabs()
+    AnonymousView()
 }

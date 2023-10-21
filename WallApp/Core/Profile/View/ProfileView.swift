@@ -117,7 +117,7 @@ struct ProfileView: View {
                         Button {
                             AuthService.shared.signOut()
                         } label: {
-                            Image(systemName: "figure.walk.departure")
+                            Text("Log out")
                                 .foregroundColor(.purple)
                         }
                         

@@ -7,8 +7,9 @@
 import SwiftUI
 
 struct LoginView: View {
-    @StateObject var viewModel = LoginViewModel()
+    @State var presentedFromAnonymousView: Bool = false
     @State private var navigateToFeed = false
+    @StateObject var viewModel = LoginViewModel()
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     var body: some View {
@@ -43,7 +44,7 @@ struct LoginView: View {
                         .frame(maxWidth: .infinity, alignment: .trailing)
                 }
                 
-                // Anonymous login
+                // MARK: Anonymous login
                 if AuthService.shared.isUserAnonymous {
                     Button {
                         Task { try await viewModel.login() }
@@ -81,7 +82,7 @@ struct LoginView: View {
                             .modifier(AnonymousLoginButton())
                     }
                     
-                    // Regular login
+                    // MARK: Regular login
                     Button {
                         Task {
                             do {
@@ -119,6 +120,8 @@ struct LoginView: View {
                     .padding(.vertical, 16)
                 }
             }
+            .padding()
+            .offset(y: presentedFromAnonymousView ? -100 : 0)
         }
     }
 }

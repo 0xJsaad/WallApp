@@ -15,7 +15,7 @@ struct WallAppTabView: View {
 
     func getViewForTab(_ tab: Int) -> some View {
         if viewModel.isUserAnonymous && (tab == 1 || tab == 3 || tab == 4) {
-            return AnyView(AnonymousAccessToTabs())
+            return AnyView(AnonymousView())
         }
         switch tab {
         case 1: return AnyView(ExploreView())
@@ -75,7 +75,7 @@ struct WallAppTabView: View {
                 .sheet(isPresented: $showAnonymousTab, onDismiss: {
                     selectedTab = 0
                 }, content: {
-                    AnonymousAccessToTabs()
+                    AnonymousView()
                 })
                 .sheet(isPresented: $showCreatedWallView, onDismiss: {
                     selectedTab = 0
