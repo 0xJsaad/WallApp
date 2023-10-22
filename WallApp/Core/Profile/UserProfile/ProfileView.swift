@@ -22,14 +22,14 @@ struct ProfileView: View {
                     Text("Follow")
                         .font(.subheadline)
                         .fontWeight(.semibold)
-                        .foregroundColor(.primary)
+                        .foregroundColor(.white)
                         .frame(width: 352, height: 32)
                         .background(.purple)
                         .cornerRadius(8)
                 }
                 
                 // user content list view
-                UserCOntentListView()
+                UserContentListView()
                 
             }
         }

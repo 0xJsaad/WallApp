@@ -30,7 +30,7 @@ struct CurrentUserProfileView: View {
                             .fontWeight(.semibold)
                             .foregroundColor(.purple)
                             .frame(width: 352, height: 32)
-                            .background(.white)
+                            .background(.clear)
                             .cornerRadius(8)
                             .overlay {
                                 RoundedRectangle(cornerRadius: 8)
@@ -39,12 +39,13 @@ struct CurrentUserProfileView: View {
                     }
                     
                     // user content list view
-                    UserCOntentListView()
+                    UserContentListView()
                 }
             }
             .sheet(isPresented: $showEditProfile, content: {
-                EditProfileView()
-                    .environmentObject(viewModel)
+                if let user = currentUser {
+                    EditProfileView(user: user)
+                }
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {

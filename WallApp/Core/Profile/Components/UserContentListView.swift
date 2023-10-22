@@ -1,5 +1,5 @@
 //
-//  UserCOntentListView.swift
+//  UserContentListView.swift
 //  WallApp
 //
 //  Created by 0xJs on 10/22/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct UserCOntentListView: View {
+struct UserContentListView: View {
     @State private var selectedFilter: ProfileWallFilter = .walls
     @Namespace var animation
     
@@ -70,5 +70,5 @@ struct UserCOntentListView: View {
 }
 
 #Preview {
-    UserCOntentListView()
+    UserContentListView()
 }

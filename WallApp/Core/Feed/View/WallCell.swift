@@ -1,5 +1,5 @@
 //
-//  ThreadCell.swift
+//  WallCell.swift
 //  WallApp
 //
 //  Created by 0xJs on 10/16/23.
@@ -11,7 +11,7 @@ struct WallCell: View {
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 12) {
-              CircularProfileImageView()
+                CircularProfileImageView(user: nil, size: .small)
                 
                 VStack(alignment: .leading, spacing: 5) {
                     HStack {
