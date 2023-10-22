@@ -16,6 +16,7 @@ struct UserCell: View {
             
             VStack(alignment: .leading, spacing: 4) {
                 Text(user.username)
+                
                     .fontWeight(.semibold)
                 
                 Text(user.fullname)
