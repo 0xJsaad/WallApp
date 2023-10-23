@@ -12,7 +12,7 @@ struct WallAppTabView: View {
     @State private var showCreatedWallView = false
     @State private var showAnonymousTab = false
     @EnvironmentObject var viewModel: ContentViewModel
-
+    
     func getViewForTab(_ tab: Int) -> some View {
         if viewModel.isUserAnonymous && (tab == 1 || tab == 3 || tab == 4) {
             return AnyView(AnonymousView())
@@ -24,67 +24,104 @@ struct WallAppTabView: View {
         default: return AnyView(EmptyView())
         }
     }
-
+    
     
     var body: some View {
-        TabView(selection: $selectedTab) {
-            FeedView()
-                .tabItem {
-                    Image(systemName: selectedTab == 0 ? "house.fill" : "house")
-                        .environment(\.symbolVariants, selectedTab == 0 ? .fill : .none)
-                }
-                .tag(0)
-            
-            
-            getViewForTab(1)
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                }
-                .tag(1)
-            
-            Text("")
-                .tabItem {
-                    Image(systemName: "plus")
-                }
-                .tag(2)
-            
-            getViewForTab(3)
-                .tabItem {
-                    Image(systemName: selectedTab == 3 ? "heart.fill" : "heart")
-                        .environment(\.symbolVariants, selectedTab == 3 ? .fill : .none)
-                }
-                .tag(3)
-            
-            getViewForTab(4)
-                .tabItem {
-                    Image(systemName: selectedTab == 4 ? "person.fill" : "person")
-                        .environment(\.symbolVariants, selectedTab == 4 ? .fill : .none)
-                }
-                .tag(4)
-        }
-        .onChange(of: selectedTab, perform: { newValue in
-                    if newValue == 2 {
-                        if viewModel.isUserAnonymous {
-                            showAnonymousTab = true
-                        } else {
-                            showCreatedWallView = true
-                        }
+        ZStack {
+            TabView(selection: $selectedTab) {
+                FeedView()
+                    .tabItem {
+                        Image(systemName: selectedTab == 0 ? "house.fill" : "house")
+                            .environment(\.symbolVariants, selectedTab == 0 ? .fill : .none)
                     }
-                })
-
-                .sheet(isPresented: $showAnonymousTab, onDismiss: {
-                    selectedTab = 0
-                }, content: {
-                    AnonymousView()
-                })
-                .sheet(isPresented: $showCreatedWallView, onDismiss: {
-                    selectedTab = 0
-                }, content: {
-                    CreateWallView()
-                })
-                .tint(.purple)
+                    .tag(0)
+                
+                
+                getViewForTab(1)
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                    }
+                    .tag(1)
+                
+                Text("")
+                    .tabItem {
+                        Image(systemName: "plus")
+                    }
+                    .tag(2)
+                
+                getViewForTab(3)
+                    .tabItem {
+                        Image(systemName: selectedTab == 3 ? "heart.fill" : "heart")
+                            .environment(\.symbolVariants, selectedTab == 3 ? .fill : .none)
+                    }
+                    .tag(3)
+                
+                getViewForTab(4)
+                    .tabItem {
+                        Image(systemName: selectedTab == 4 ? "person.fill" : "person")
+                            .environment(\.symbolVariants, selectedTab == 4 ? .fill : .none)
+                    }
+                    .tag(4)
+            }
+            .onChange(of: selectedTab, perform: { newValue in
+                if newValue == 2 {
+                    if viewModel.isUserAnonymous {
+                        showAnonymousTab = false
+                    } else {
+                        showCreatedWallView = true
+                    }
+                }
+            })
+            .sheet(isPresented: $showAnonymousTab, onDismiss: {
+                selectedTab = 0
+            }, content: {
+                AnonymousView()
+            })
+            .sheet(isPresented: $showCreatedWallView, onDismiss: {
+                selectedTab = 0
+            }, content: {
+                CreateWallView()
+            })
+            .tint(.purple)
+            // The conditional overlay content
+            if selectedTab == 2 && !showAnonymousTab && viewModel.isUserAnonymous {
+                VStack(spacing: 10) { // Add spacing between the text and the button
+                    Spacer()
+                    
+                    Text("Guests can't post on the wall.")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 15)
+                                .foregroundColor(.purple)
+                                .shadow(radius: 5)
+                        )
+                    
+                    Button(action: {
+                        withAnimation {
+                            selectedTab = 4
+                        }
+                    }) {
+                        Text("Go to Profile to Sign Up")
+                            .font(.headline)
+                            .padding(.horizontal, 20)
+                            .padding(.vertical, 10)
+                            .background(
+                                RoundedRectangle(cornerRadius: 15)
+                                    .foregroundColor(.purple)
+                                    .shadow(radius: 5)
+                            )
+                            .foregroundColor(.white) // Set text color to white for better contrast against the purple background
+                    }
+                    
+                    Spacer()
+                }
+                .transition(.slide)
             }
         }
+    }
+}
 
 #Preview {
     WallAppTabView().environmentObject(ContentViewModel())

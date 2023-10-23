@@ -87,7 +87,6 @@ struct LoginView: View {
                         Task {
                             do {
                                 try await viewModel.login()
-                                navigateToFeed = true  // This will trigger navigation to FeedView
                             } catch {
                                 // Handle the error
                             }

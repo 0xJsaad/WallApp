@@ -50,6 +50,9 @@
 		D5F569852AE5A4D80080851D /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F569842AE5A4D80080851D /* EditProfileViewModel.swift */; };
 		D5F569872AE5A9A00080851D /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F569862AE5A9A00080851D /* ImageUploader.swift */; };
 		D5F5698A2AE5B53E0080851D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D5F569892AE5B53E0080851D /* Kingfisher */; };
+		D5F5698C2AE5D3090080851D /* Wall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F5698B2AE5D3090080851D /* Wall.swift */; };
+		D5F5698F2AE5D3E90080851D /* CreateWallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F5698E2AE5D3E90080851D /* CreateWallViewModel.swift */; };
+		D5F569942AE5D4220080851D /* WallService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F569932AE5D4220080851D /* WallService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +114,9 @@
 		D5F569812AE587810080851D /* UserContentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContentListView.swift; sourceTree = "<group>"; };
 		D5F569842AE5A4D80080851D /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		D5F569862AE5A9A00080851D /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		D5F5698B2AE5D3090080851D /* Wall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wall.swift; sourceTree = "<group>"; };
+		D5F5698E2AE5D3E90080851D /* CreateWallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWallViewModel.swift; sourceTree = "<group>"; };
+		D5F569932AE5D4220080851D /* WallService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +231,7 @@
 			children = (
 				D55422322AE084510092A61E /* UserService.swift */,
 				D5F569862AE5A9A00080851D /* ImageUploader.swift */,
+				D5F569932AE5D4220080851D /* WallService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -233,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				D55422302AE07E780092A61E /* User.swift */,
+				D5F5698B2AE5D3090080851D /* Wall.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				D547BF612ADE2CE20006D2B4 /* View */,
+				D5F5698D2AE5D3D30080851D /* ViewModel */,
 			);
 			path = WallCreation;
 			sourceTree = "<group>";
@@ -518,6 +527,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D5F5698D2AE5D3D30080851D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5F5698E2AE5D3E90080851D /* CreateWallViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -676,6 +693,7 @@
 				D5F569872AE5A9A00080851D /* ImageUploader.swift in Sources */,
 				D5F569852AE5A4D80080851D /* EditProfileViewModel.swift in Sources */,
 				D547BF1A2ADE162F0006D2B4 /* ContentView.swift in Sources */,
+				D5F5698F2AE5D3E90080851D /* CreateWallViewModel.swift in Sources */,
 				D547BF6D2ADE2E880006D2B4 /* ActivityView.swift in Sources */,
 				D55422312AE07E780092A61E /* User.swift in Sources */,
 				D5F569802AE5850B0080851D /* ProfileHeaderView.swift in Sources */,
@@ -683,8 +701,10 @@
 				D557607A2AE1A0720039D2BF /* RegistrationViewModel.swift in Sources */,
 				D5F5697C2AE57EA00080851D /* CurrentUserProfileView.swift in Sources */,
 				D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */,
+				D5F569942AE5D4220080851D /* WallService.swift in Sources */,
 				D547BF722ADE3ECA0006D2B4 /* CircularProfileImageView.swift in Sources */,
 				D547BF742ADE3F6B0006D2B4 /* UserCell.swift in Sources */,
+				D5F5698C2AE5D3090080851D /* Wall.swift in Sources */,
 				D547BF792ADE49350006D2B4 /* ProfileWallFilter.swift in Sources */,
 				D547BF522ADE21CF0006D2B4 /* WallAppTextFieldModifiers.swift in Sources */,
 				D547BF6F2ADE31CA0006D2B4 /* WallCell.swift in Sources */,

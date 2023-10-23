@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct CreateWallView: View {
+    @StateObject var viewModel = CreateWallViewModel()
     @State private var caption = ""
     @Environment(\.dismiss) var dismiss
     
+    private var user: User? {
+        return UserService.shared.currentUser
+    }
     
     var body: some View {
         NavigationStack {
             VStack {
                 HStack(alignment: .top) {
-                    CircularProfileImageView(user: nil, size: .small)
+                    CircularProfileImageView(user: user, size: .small)
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("leomessi_10")
+                        Text(user?.fullname ?? "")
                             .fontWeight(.semibold)
                         
                         TextField("Start a wall post...", text: $caption, axis: .vertical)
@@ -57,7 +61,8 @@ struct CreateWallView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Post") {
-                        
+                        Task { try await viewModel.uploadWall(caption: caption) }
+                        dismiss()
                     }
                     .opacity(caption.isEmpty ? 0.5 : 1.0)
                     .disabled(caption.isEmpty)
