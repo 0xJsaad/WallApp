@@ -83,18 +83,19 @@ struct WallAppTabView: View {
                 CreateWallView()
             })
             .tint(.purple)
-            // The conditional overlay content
+            
+            // Third view for anonymous users who go to the "+" tab
             if selectedTab == 2 && !showAnonymousTab && viewModel.isUserAnonymous {
-                VStack(spacing: 10) { // Add spacing between the text and the button
+                VStack(spacing: 20) { // Add spacing between the text and the button
                     Spacer()
                     
                     Text("Guests can't post on the wall.")
                         .font(.headline)
-                        .foregroundColor(.white)
+                        .foregroundColor(.purple)
                         .padding()
                         .background(
-                            RoundedRectangle(cornerRadius: 15)
-                                .foregroundColor(.purple)
+                            RoundedRectangle(cornerRadius: 8)
+                                .stroke(Color(.purple), lineWidth: 1)
                                 .shadow(radius: 5)
                         )
                     

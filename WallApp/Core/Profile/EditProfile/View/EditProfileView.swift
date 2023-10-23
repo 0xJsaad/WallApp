@@ -74,15 +74,15 @@ struct EditProfileView: View {
                     Divider()
                     
                     Toggle("Private profile", isOn: $isPrivateProfile)
-                        .toggleStyle(SwitchToggleStyle(tint: .green))
+                        .toggleStyle(SwitchToggleStyle(tint: .purple))
                 }
                 .font(.footnote)
                 .padding()
-                .background(.purple)
+                .background(.clear)
                 .cornerRadius(10)
                 .overlay {
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(.systemGray4), lineWidth: 1)
+                        .stroke(Color(.purple), lineWidth: 1)
                 }
                 .padding()
             }

@@ -53,6 +53,7 @@
 		D5F5698C2AE5D3090080851D /* Wall.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F5698B2AE5D3090080851D /* Wall.swift */; };
 		D5F5698F2AE5D3E90080851D /* CreateWallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F5698E2AE5D3E90080851D /* CreateWallViewModel.swift */; };
 		D5F569942AE5D4220080851D /* WallService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F569932AE5D4220080851D /* WallService.swift */; };
+		D5F569972AE61AA20080851D /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F569962AE61AA20080851D /* FeedViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +118,7 @@
 		D5F5698B2AE5D3090080851D /* Wall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wall.swift; sourceTree = "<group>"; };
 		D5F5698E2AE5D3E90080851D /* CreateWallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateWallViewModel.swift; sourceTree = "<group>"; };
 		D5F569932AE5D4220080851D /* WallService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallService.swift; sourceTree = "<group>"; };
+		D5F569962AE61AA20080851D /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				D547BF592ADE2BFF0006D2B4 /* View */,
+				D5F569952AE61A720080851D /* ViewModel */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -535,6 +538,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		D5F569952AE61A720080851D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5F569962AE61AA20080851D /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -703,6 +714,7 @@
 				D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */,
 				D5F569942AE5D4220080851D /* WallService.swift in Sources */,
 				D547BF722ADE3ECA0006D2B4 /* CircularProfileImageView.swift in Sources */,
+				D5F569972AE61AA20080851D /* FeedViewModel.swift in Sources */,
 				D547BF742ADE3F6B0006D2B4 /* UserCell.swift in Sources */,
 				D5F5698C2AE5D3090080851D /* Wall.swift in Sources */,
 				D547BF792ADE49350006D2B4 /* ProfileWallFilter.swift in Sources */,

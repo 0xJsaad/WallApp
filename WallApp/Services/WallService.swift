@@ -15,4 +15,14 @@ struct WallService {
         guard let wallData = try? Firestore.Encoder().encode(wall) else { return }
         let ref = try await Firestore.firestore().collection("wall posts").addDocument(data: wallData)
     }
+    
+    static func fetchWall() async throws -> [Wall] {
+        let snapshot = try await Firestore
+            .firestore()
+            .collection("wall posts")
+            .order(by: "timestamp", descending: true)
+            .getDocuments()
+        
+        return snapshot.documents.compactMap({ try? $0.data(as: Wall.self) })
+    }
 }

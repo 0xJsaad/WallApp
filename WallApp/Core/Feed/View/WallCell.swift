@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct WallCell: View {
+    let wall: Wall
+    
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 12) {
-                CircularProfileImageView(user: nil, size: .small)
+                CircularProfileImageView(user: wall.user, size: .small)
                 
-                VStack(alignment: .leading, spacing: 5) {
+                VStack(alignment: .leading, spacing: 4) {
                     HStack {
-                        Text ("leomessi_10")
+                        Text(wall.user?.username ?? "")
                             .font(.footnote)
                             .fontWeight(.semibold)
                         
@@ -23,7 +25,7 @@ struct WallCell: View {
                         
                         Text("10m")
                             .font(.caption)
-                            .foregroundColor(Color(.systemGray3))
+                            .foregroundColor(Color(.systemGray3))   
                         
                         Button {
                             
@@ -33,7 +35,7 @@ struct WallCell: View {
                         }
                     }
                     
-                    Text("World cup champion")
+                    Text(wall.caption)
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
                     
@@ -74,5 +76,5 @@ struct WallCell: View {
 }
 
 #Preview {
-    WallCell()
+    WallCell(wall: PreviewProvider.dev.wall)
 }

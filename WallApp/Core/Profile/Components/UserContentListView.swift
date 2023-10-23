@@ -61,7 +61,7 @@ struct UserContentListView: View {
             
             LazyVStack {
                 ForEach(0 ... 10, id: \.self) { wall in
-                    WallCell()
+//                   WallCell()
                 }
             }
         }
