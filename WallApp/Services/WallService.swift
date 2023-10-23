@@ -13,10 +13,10 @@ struct WallService {
     
     static func uploadWall(_ wall: Wall) async throws {
         guard let wallData = try? Firestore.Encoder().encode(wall) else { return }
-        let ref = try await Firestore.firestore().collection("wall posts").addDocument(data: wallData)
+        try await Firestore.firestore().collection("wall posts").addDocument(data: wallData)
     }
     
-    static func fetchWall() async throws -> [Wall] {
+    static func fetchWalls() async throws -> [Wall] {
         let snapshot = try await Firestore
             .firestore()
             .collection("wall posts")
@@ -24,5 +24,17 @@ struct WallService {
             .getDocuments()
         
         return snapshot.documents.compactMap({ try? $0.data(as: Wall.self) })
+    }
+    
+    static func fetchUserWalls(uid: String) async throws -> [Wall] {
+        let snapshot = try await Firestore
+            .firestore()
+            .collection("wall posts")
+            .whereField("ownerUid",isEqualTo: uid)
+            .getDocuments()
+        
+        
+        let walls = snapshot.documents.compactMap({ try? $0.data(as: Wall.self) })
+        return walls.sorted(by: { $0.timestamp.dateValue() > $1.timestamp.dateValue() })
     }
 }

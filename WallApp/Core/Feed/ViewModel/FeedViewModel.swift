@@ -16,7 +16,7 @@ class FeedViewModel: ObservableObject {
     }
     
     func fetchWalls() async throws {
-        self.walls = try await WallService.fetchWall()
+        self.walls = try await WallService.fetchWalls()
         try await fetchUserDataforWalls()
     }
     

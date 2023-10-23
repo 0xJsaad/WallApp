@@ -23,7 +23,7 @@ struct WallCell: View {
                         
                         Spacer()
                         
-                        Text("10m")
+                        Text(wall.timestamp.timestampString())
                             .font(.caption)
                             .foregroundColor(Color(.systemGray3))   
                         

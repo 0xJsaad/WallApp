@@ -9,6 +9,7 @@ import SwiftUI
 
 
 struct UserContentListView: View {
+    @StateObject var viewModel: UserContentListViewModel
     @State private var selectedFilter: ProfileWallFilter = .walls
     @Namespace var animation
     
@@ -17,6 +18,9 @@ struct UserContentListView: View {
         return UIScreen.main.bounds.width / count - 16
     }
     
+    init(user: User) {
+        self._viewModel = StateObject(wrappedValue: UserContentListViewModel(user: user))
+    }
     
     // Check if the user is anonymous
     private var isUserAnonymous: Bool {
@@ -60,8 +64,8 @@ struct UserContentListView: View {
             
             
             LazyVStack {
-                ForEach(0 ... 10, id: \.self) { wall in
-//                   WallCell()
+                ForEach(viewModel.walls) { wall in
+                    WallCell(wall: wall)
                 }
             }
         }
@@ -70,5 +74,5 @@ struct UserContentListView: View {
 }
 
 #Preview {
-    UserContentListView()
+    UserContentListView(user: PreviewProvider.dev.user)
 }
