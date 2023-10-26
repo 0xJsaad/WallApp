@@ -10,6 +10,10 @@ import SwiftUI
 struct WallCell: View {
     let wall: Wall
     
+    init(wall: Wall) {
+        self.wall = wall
+    }
+    
     var body: some View {
         VStack {
             HStack(alignment: .top, spacing: 12) {
@@ -25,7 +29,7 @@ struct WallCell: View {
                         
                         Text(wall.timestamp.timestampString())
                             .font(.caption)
-                            .foregroundColor(Color(.systemGray3))   
+                            .foregroundColor(Color(.systemGray3))
                         
                         Button {
                             
@@ -39,33 +43,8 @@ struct WallCell: View {
                         .font(.footnote)
                         .multilineTextAlignment(.leading)
                     
-                    HStack(spacing: 16) {
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "heart")
-                        }
-                        
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "bubble.right")
-                        }
-                        
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "arrow.rectanglepath")
-                        }
-                        
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "paperplane")
-                        }
-                        
-                    }
-                    .foregroundColor(.purple)
+                    ContentActionButtonsView(wall: wall)
+                    .foregroundColor(.primary)
                     .padding(.vertical, 8)
                 }
             }

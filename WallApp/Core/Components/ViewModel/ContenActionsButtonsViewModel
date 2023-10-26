@@ -1,0 +1,37 @@
+//
+//  WallRowViewModel.swift
+//  WallApp
+//
+//  Created by 0xJs on 10/23/23.
+//
+
+import Foundation
+
+class WallRowViewModel: ObservableObject {
+    @Published var wall: Wall
+    
+    init(wall: Wall) {
+        self.wall = wall
+        checkIfUSerLikedWall()
+    }
+    
+    func likeWall() {
+        WallService.likeWall(wall) {
+            self.wall.didLike = true
+        }
+    }
+    
+    func unlikeWall() {
+        WallService.unlikeWall(wall) {
+            self.wall.didLike = false
+        }
+    }
+    
+    func checkIfUSerLikedWall() {
+        WallService.checkIfUserLikedWall(wall) { didLike in
+            if didLike {
+                self.wall.didLike = true
+            }
+        }
+    }
+}

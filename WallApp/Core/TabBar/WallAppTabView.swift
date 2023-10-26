@@ -19,7 +19,7 @@ struct WallAppTabView: View {
         }
         switch tab {
         case 1: return AnyView(ExploreView())
-        case 3: return AnyView(ActivityView())
+        case 3: return AnyView(NotificationRow())
         case 4: return AnyView(CurrentUserProfileView())
         default: return AnyView(EmptyView())
         }

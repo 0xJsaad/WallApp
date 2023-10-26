@@ -38,3 +38,41 @@ struct WallService {
         return walls.sorted(by: { $0.timestamp.dateValue() > $1.timestamp.dateValue() })
     }
 }
+    
+// MARK: - Likes
+
+extension WallService {
+    static func likeWall(_ wall: Wall) async throws {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let wallRef = FirestoreConstants.WallsCollection.document(wall.id)
+        
+        async let _ = try await wallRef.collection("wall-likes").document(uid).setData([:])
+        async let _ = try await wallRef.updateData(["likes": wall.likes + 1])
+        async let _ = try await FirestoreConstants.UserCollection.document(uid).collection("user-likes").document(wall.id).setData([:])
+    }
+    
+    static  func unlikeWall(_ wall: Wall) async throws {
+        guard wall.likes > 0 else { return }
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        let wallRef = FirestoreConstants.WallsCollection.document(wall.id)
+        
+        async let _ = wallRef.collection("wall-likes").document(uid).delete()
+        async let _ = try await FirestoreConstants.UserCollection.document(uid).collection("user-likes").document(wall.id).delete()
+        async let _ = try await wallRef.updateData(["likes": wall.likes - 1])
+    }
+    
+    static func checkIfUserLikedWall(_ wall: Wall) async throws -> (Bool) {
+        guard let uid = Auth.auth().currentUser?.uid else { return false }
+        
+        
+        let snapshot = try await FirestoreConstants
+            .UserCollection
+            .document(uid)
+            .collection("user-likes")
+            .document(wall.id)
+            .getDocument()
+        
+        return snapshot.exists
+    }
+}
+

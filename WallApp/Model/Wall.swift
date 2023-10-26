@@ -15,6 +15,8 @@ struct Wall: Identifiable, Codable {
     let timestamp: Timestamp
     var likes: Int
     
+    var didLike: Bool? = false
+    
     var id: String {
         return wallId ?? NSUUID().uuidString
     }
