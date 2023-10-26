@@ -11,7 +11,7 @@ class CreateWallViewModel: ObservableObject {
     func uploadWall(caption: String) async throws {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         
-        let wall = Wall(ownerUid: uid, caption: caption, timestamp: Timestamp(), likes: 0)
+        let wall = Wall(ownerUid: uid, caption: caption, timestamp: Timestamp(), likes: 0, replyCount: 0)
         try await WallService.uploadWall(wall)
     }
     

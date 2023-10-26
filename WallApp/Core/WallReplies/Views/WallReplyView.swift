@@ -11,6 +11,7 @@ struct WallReplyView: View {
     let wall: Wall
     @State private var replyText = ""
     @State private var wallViewHeight: CGFloat = 24
+    @StateObject var viewModel = WallReplyViewModel()
     @Environment(\.dismiss) var dismiss
 
     private var currentUser: User? {
@@ -87,6 +88,9 @@ struct WallReplyView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Post") {
+                        Task {
+                            try await viewModel.uploadWallReply(replyText: replyText, wall: wall)
+                        }
                         dismiss()
                     }
                     .opacity(replyText.isEmpty ? 0.5 : 1.0)

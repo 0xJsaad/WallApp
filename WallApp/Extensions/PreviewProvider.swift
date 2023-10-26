@@ -19,5 +19,5 @@ class DeveloperPreview {
     
     let user = User(id: UUID().uuidString, fullname: "0xJsaad", email: "dev@gmail.com", username: "dev")
     
-    let wall = Wall(ownerUid: "123", caption: "This is a wall post", timestamp: Timestamp(), likes: 0)
+    let wall = Wall(ownerUid: "123", caption: "This is a wall post", timestamp: Timestamp(), likes: 0, replyCount: 0)
 }
