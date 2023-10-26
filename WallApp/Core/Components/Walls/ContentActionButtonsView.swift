@@ -67,11 +67,18 @@ struct ContentActionButtonsView: View {
                 
             }
             
-            if wall.likes > 0 {
-                Text("\(wall.likes) likes")
-                    .font(.caption)
-                    .foregroundColor(.gray)
-                    .padding(.vertical, 4)
+            HStack(spacing: 4) {
+                if wall.replyCount > 0 {
+                    Text("\(wall.replyCount) replies")
+                    
+                }
+                if wall.replyCount > 0 && wall.likes > 0 {
+                    Text("-")
+                }
+                if wall.likes > 0 {
+                    Text("\(wall.likes) likes")
+
+                }
             }
         }
         .sheet(isPresented: $showReplySheet) {

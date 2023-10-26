@@ -17,4 +17,20 @@ struct WallReplyService {
             "replyCount": wall.replyCount + 1
         ])
     }
+    
+    static func fetchWallReplies(forWall wall: Wall) async throws -> [WallReply] {
+        let snapshot = try await FirestoreConstants
+            .RepliesCollection
+            .whereField("WallId", isEqualTo: wall.id)
+            .getDocuments()
+        
+        return snapshot.documents.compactMap({ try? $0.data(as: WallReply.self) })
+    }
+    
+    static func fetchWallReplies(forUser user: User) async throws -> [WallReply] {
+        .RepliesCollection
+        .whereField("wallOwnerUid", isEqualTo: wall.id)
+        .getDocuments()
+
+    }
 }
