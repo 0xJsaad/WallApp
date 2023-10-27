@@ -80,6 +80,9 @@ struct ContentActionButtonsView: View {
 
                 }
             }
+            .font(.caption)
+            .foregroundColor(.gray)
+            .padding(.vertical, 4)
         }
         .sheet(isPresented: $showReplySheet) {
             WallReplyView(wall: wall)

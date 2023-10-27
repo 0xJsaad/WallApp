@@ -15,13 +15,19 @@ struct FeedView: View {
             ScrollView(showsIndicators: false) {
                 LazyVStack {
                     ForEach(viewModel.walls) { wall in
-                        WallCell(wall: wall)
+                        NavigationLink(value: wall) {
+                            WallCell(wall: wall)
+                            
+                        }
                     }
                 }
             }
             .refreshable {
                 Task { try await viewModel.fetchWalls() }
             }
+            .navigationDestination(for: Wall.self, destination: { wall in
+                WallDetailsView(wall: wall)
+            })
             .navigationTitle("Wall")
             .navigationBarTitleDisplayMode(.inline)
         }

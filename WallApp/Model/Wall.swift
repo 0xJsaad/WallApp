@@ -8,7 +8,7 @@
 import Firebase
 import FirebaseFirestoreSwift
 
-struct Wall: Identifiable, Codable {
+struct Wall: Identifiable, Hashable, Codable {
     @DocumentID var wallId: String?
     let ownerUid: String
     let caption: String

@@ -31,7 +31,7 @@ struct WallAppTabView: View {
             TabView(selection: $selectedTab) {
                 FeedView()
                     .tabItem {
-                        Image(systemName: selectedTab == 0 ? "house.fill" : "house")
+                        Image(systemName: selectedTab == 0 ? "person.2.square.stack.fill" : "person.2.square.stack")
                             .environment(\.symbolVariants, selectedTab == 0 ? .fill : .none)
                     }
                     .tag(0)
@@ -39,7 +39,7 @@ struct WallAppTabView: View {
                 
                 getViewForTab(1)
                     .tabItem {
-                        Image(systemName: "magnifyingglass")
+                        Image(systemName: "sparkle.magnifyingglass")
                     }
                     .tag(1)
                 
@@ -63,6 +63,8 @@ struct WallAppTabView: View {
                     }
                     .tag(4)
             }
+            .foregroundColor(.primary)
+            
             .onChange(of: selectedTab, perform: { newValue in
                 if newValue == 2 {
                     if viewModel.isUserAnonymous {

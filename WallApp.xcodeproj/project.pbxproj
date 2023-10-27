@@ -51,6 +51,9 @@
 		D5AD706D2AEA181F00AA3DC3 /* WallReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD706C2AEA181F00AA3DC3 /* WallReply.swift */; };
 		D5AD70702AEA19CE00AA3DC3 /* WallReplyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD706F2AEA19CE00AA3DC3 /* WallReplyService.swift */; };
 		D5AD70722AEA1A5800AA3DC3 /* WallReplyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD70712AEA1A5800AA3DC3 /* WallReplyViewModel.swift */; };
+		D5AD70772AEA380B00AA3DC3 /* WallDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD70762AEA380B00AA3DC3 /* WallDetailsView.swift */; };
+		D5AD70792AEA9B7F00AA3DC3 /* WallDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD70782AEA9B7F00AA3DC3 /* WallDetailsViewModel.swift */; };
+		D5AD707B2AEA9EB900AA3DC3 /* WallReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD707A2AEA9EB900AA3DC3 /* WallReplyCell.swift */; };
 		D5E77F402AE654FB00645367 /* NotificationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E77F3F2AE654FB00645367 /* NotificationRow.swift */; };
 		D5E77F462AE6730B00645367 /* WallFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E77F452AE6730B00645367 /* WallFilterViewModel.swift */; };
 		D5E77F482AE6735100645367 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E77F472AE6735100645367 /* ProfileViewModel.swift */; };
@@ -129,6 +132,9 @@
 		D5AD706C2AEA181F00AA3DC3 /* WallReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallReply.swift; sourceTree = "<group>"; };
 		D5AD706F2AEA19CE00AA3DC3 /* WallReplyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallReplyService.swift; sourceTree = "<group>"; };
 		D5AD70712AEA1A5800AA3DC3 /* WallReplyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallReplyViewModel.swift; sourceTree = "<group>"; };
+		D5AD70762AEA380B00AA3DC3 /* WallDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallDetailsView.swift; sourceTree = "<group>"; };
+		D5AD70782AEA9B7F00AA3DC3 /* WallDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallDetailsViewModel.swift; sourceTree = "<group>"; };
+		D5AD707A2AEA9EB900AA3DC3 /* WallReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallReplyCell.swift; sourceTree = "<group>"; };
 		D5E77F3F2AE654FB00645367 /* NotificationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationRow.swift; sourceTree = "<group>"; };
 		D5E77F452AE6730B00645367 /* WallFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallFilterViewModel.swift; sourceTree = "<group>"; };
 		D5E77F472AE6735100645367 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -294,6 +300,7 @@
 				D547BF492ADE169F0006D2B4 /* Root */,
 				D547BF552ADE29870006D2B4 /* TabBar */,
 				D547BF602ADE2CDA0006D2B4 /* WallCreation */,
+				D5AD70732AEA37CD00AA3DC3 /* WallDetails */,
 				D5AD70642AEA0D2700AA3DC3 /* WallReplies */,
 			);
 			path = Core;
@@ -552,6 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				D5AD70672AEA0D4A00AA3DC3 /* WallReplyView.swift */,
+				D5AD707A2AEA9EB900AA3DC3 /* WallReplyCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -578,6 +586,31 @@
 				D5AD706F2AEA19CE00AA3DC3 /* WallReplyService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		D5AD70732AEA37CD00AA3DC3 /* WallDetails */ = {
+			isa = PBXGroup;
+			children = (
+				D5AD70752AEA37E500AA3DC3 /* View */,
+				D5AD70742AEA37DE00AA3DC3 /* ViewModel */,
+			);
+			path = WallDetails;
+			sourceTree = "<group>";
+		};
+		D5AD70742AEA37DE00AA3DC3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				D5AD70782AEA9B7F00AA3DC3 /* WallDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		D5AD70752AEA37E500AA3DC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D5AD70762AEA380B00AA3DC3 /* WallDetailsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D5E77F332AE6455F00645367 /* ViewModel */ = {
@@ -839,7 +872,9 @@
 				D55422332AE084510092A61E /* UserService.swift in Sources */,
 				D547BF902ADF345D0006D2B4 /* AuthService.swift in Sources */,
 				D5F569872AE5A9A00080851D /* ImageUploader.swift in Sources */,
+				D5AD70792AEA9B7F00AA3DC3 /* WallDetailsViewModel.swift in Sources */,
 				D5F569852AE5A4D80080851D /* EditProfileViewModel.swift in Sources */,
+				D5AD707B2AEA9EB900AA3DC3 /* WallReplyCell.swift in Sources */,
 				D547BF1A2ADE162F0006D2B4 /* ContentView.swift in Sources */,
 				D5F5698F2AE5D3E90080851D /* CreateWallViewModel.swift in Sources */,
 				D55422312AE07E780092A61E /* User.swift in Sources */,
@@ -849,6 +884,7 @@
 				D557607A2AE1A0720039D2BF /* RegistrationViewModel.swift in Sources */,
 				D5F5697C2AE57EA00080851D /* CurrentUserProfileView.swift in Sources */,
 				D5E77F482AE6735100645367 /* ProfileViewModel.swift in Sources */,
+				D5AD70772AEA380B00AA3DC3 /* WallDetailsView.swift in Sources */,
 				D5AD70702AEA19CE00AA3DC3 /* WallReplyService.swift in Sources */,
 				D5F5699D2AE62E1E0080851D /* Timestamp.swift in Sources */,
 				D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */,

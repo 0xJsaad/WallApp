@@ -24,7 +24,7 @@ class FeedViewModel: ObservableObject {
         for i in 0 ..< walls.count {
             let wall = walls[i]
             let ownerUid = wall.ownerUid
-            let wallUser = try await UserService.shared.fetchUser(withUid: ownerUid)
+            let wallUser = try await UserService.fetchUser(withUid: ownerUid)
             
             walls[i].user = wallUser
         }

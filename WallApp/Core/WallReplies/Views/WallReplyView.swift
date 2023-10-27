@@ -90,8 +90,8 @@ struct WallReplyView: View {
                     Button("Post") {
                         Task {
                             try await viewModel.uploadWallReply(replyText: replyText, wall: wall)
+                            dismiss()
                         }
-                        dismiss()
                     }
                     .opacity(replyText.isEmpty ? 0.5 : 1.0)
                     .disabled(replyText.isEmpty)
