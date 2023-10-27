@@ -34,8 +34,8 @@ struct WallCell: View {
                         Button {
                             
                         } label: {
-                            Image(systemName: "ellipsis")
-                                .foregroundColor(Color(.darkGray))
+                            Image(systemName: "poweron")
+                                .foregroundColor(Color(.purple))
                         }
                     }
                     

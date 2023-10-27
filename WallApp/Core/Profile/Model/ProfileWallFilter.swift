@@ -9,12 +9,12 @@ import Foundation
 
 enum ProfileWallFilter: Int, CaseIterable, Identifiable {
     case walls
-    case wallReplies
+    case replies
     
     var title: String {
         switch self {
-        case .walls: return "Wall"
-        case .wallReplies: return "Wall Replies"
+        case .walls: return "walls"
+        case .replies: return "replies"
         }
     }
     

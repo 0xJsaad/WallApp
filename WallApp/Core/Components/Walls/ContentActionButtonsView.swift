@@ -34,8 +34,8 @@ struct ContentActionButtonsView: View {
     }
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack(spacing: 16) {
+        VStack(alignment: .center) {
+            HStack(spacing: 35) {
                 Button {
                     handleLikeTapped()
                 } label: {
@@ -51,33 +51,24 @@ struct ContentActionButtonsView: View {
                         .font(.headline)
                 }
                 
-                Button {
-                    
-                } label: {
-                    Image(systemName: "arrow.rectanglepath")
-                        .font(.headline)
-                }
-                
-                Button {
-                    
-                } label: {
-                    Image(systemName: "paperplane")
-                        .font(.headline)
-                }
-                
             }
             
             HStack(spacing: 4) {
-                if wall.replyCount > 0 {
-                    Text("\(wall.replyCount) replies")
-                    
-                }
-                if wall.replyCount > 0 && wall.likes > 0 {
-                    Text("-")
-                }
                 if wall.likes > 0 {
                     Text("\(wall.likes) likes")
+                    
+                } else {
+                    Text("like ")
+                    
+                }
+                if wall.replyCount >= 0 && wall.likes >= 0 {
+                    Text("-")
+                }
+                if wall.replyCount > 0 {
+                    Text("\(wall.replyCount) replies")
 
+                } else {
+                    Text(" reply")
                 }
             }
             .font(.caption)

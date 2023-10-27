@@ -14,13 +14,12 @@ struct WallAppTabView: View {
     @EnvironmentObject var viewModel: ContentViewModel
     
     func getViewForTab(_ tab: Int) -> some View {
-        if viewModel.isUserAnonymous && (tab == 1 || tab == 3 || tab == 4) {
+        if viewModel.isUserAnonymous && (tab == 1 || tab == 3 ) {
             return AnyView(AnonymousView())
         }
         switch tab {
         case 1: return AnyView(ExploreView())
-        case 3: return AnyView(NotificationRow())
-        case 4: return AnyView(CurrentUserProfileView())
+        case 3: return AnyView(CurrentUserProfileView())
         default: return AnyView(EmptyView())
         }
     }
@@ -51,17 +50,10 @@ struct WallAppTabView: View {
                 
                 getViewForTab(3)
                     .tabItem {
-                        Image(systemName: selectedTab == 3 ? "heart.fill" : "heart")
-                            .environment(\.symbolVariants, selectedTab == 3 ? .fill : .none)
-                    }
-                    .tag(3)
-                
-                getViewForTab(4)
-                    .tabItem {
                         Image(systemName: selectedTab == 4 ? "person.fill" : "person")
                             .environment(\.symbolVariants, selectedTab == 4 ? .fill : .none)
                     }
-                    .tag(4)
+                    .tag(3)
             }
             .foregroundColor(.primary)
             

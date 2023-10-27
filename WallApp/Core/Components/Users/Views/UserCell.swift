@@ -25,7 +25,7 @@ struct UserCell: View {
             
             Spacer()
             
-            Text("Follow")
+            Text("View")
                 .font(.subheadline)
                 .fontWeight(.semibold)
                 .frame(width: 100, height: 32)

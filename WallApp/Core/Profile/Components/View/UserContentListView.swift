@@ -64,14 +64,25 @@ struct UserContentListView: View {
             
             
             LazyVStack {
-                ForEach(viewModel.walls) { wall in
-                    WallCell(wall: wall)
+                switch selectedFilter {
+                case .walls:
+                    ForEach(viewModel.walls) { wall in
+                        WallCell(wall: wall)
+                            .transition(.move(edge: .leading))
+                    }
+                case .replies:
+                    ForEach(viewModel.replies) { reply in
+                        WallReplyProfileCell(reply: reply)
+                            .transition(.move(edge: .trailing))
+                    }
                 }
             }
         }
         .padding(.vertical, 8)
+        
     }
 }
+
 
 #Preview {
     UserContentListView(user: PreviewProvider.dev.user)

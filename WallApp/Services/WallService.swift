@@ -37,6 +37,30 @@ struct WallService {
         let walls = snapshot.documents.compactMap({ try? $0.data(as: Wall.self) })
         return walls.sorted(by: { $0.timestamp.dateValue() > $1.timestamp.dateValue() })
     }
+    
+    static func fetchUserReplies(forUser user: User) async throws  -> [WallReply] {
+        let snapshot = try await FirestoreConstants
+            .RepliesCollection
+            .whereField("wallReplyOwnerUid", isEqualTo: user.id)
+            .getDocuments()
+        
+        var replies = snapshot.documents.compactMap({ try? $0.data(as: WallReply.self) })
+        
+        for i in 0 ..< replies.count {
+            replies[i].replyUser = user
+        }
+        
+        return replies
+    }
+    
+    static func fetchWall(wallId: String) async throws -> Wall {
+        let snapshot = try await FirestoreConstants
+            .WallsCollection
+            .document(wallId)
+            .getDocument()
+        
+        return try snapshot.data(as: Wall.self)
+    }
 }
     
 // MARK: - Likes
