@@ -136,6 +136,7 @@
 		D5AD70782AEA9B7F00AA3DC3 /* WallDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallDetailsViewModel.swift; sourceTree = "<group>"; };
 		D5AD707A2AEA9EB900AA3DC3 /* WallReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallReplyCell.swift; sourceTree = "<group>"; };
 		D5AD707C2AEB4DD100AA3DC3 /* WallReplyProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallReplyProfileCell.swift; sourceTree = "<group>"; };
+		D5AD70822AEB86D900AA3DC3 /* WallApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WallApp.entitlements; sourceTree = "<group>"; };
 		D5E77F452AE6730B00645367 /* WallFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallFilterViewModel.swift; sourceTree = "<group>"; };
 		D5E77F472AE6735100645367 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D5F5697B2AE57EA00080851D /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 		D547BF162ADE162F0006D2B4 /* WallApp */ = {
 			isa = PBXGroup;
 			children = (
+				D5AD70822AEB86D900AA3DC3 /* WallApp.entitlements */,
 				D547BF482ADE16610006D2B4 /* App */,
 				D547BF472ADE16590006D2B4 /* Core */,
 				D547BF462ADE16580006D2B4 /* Extensions */,
@@ -1040,6 +1042,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WallApp/WallApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WallApp/Preview Content\"";
@@ -1071,6 +1074,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WallApp/WallApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WallApp/Preview Content\"";

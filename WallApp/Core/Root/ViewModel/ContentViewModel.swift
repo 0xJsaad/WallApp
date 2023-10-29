@@ -17,6 +17,25 @@ class ContentViewModel: ObservableObject {
     var isUserAnonymous: Bool {
            return userSession?.isAnonymous ?? true
        }
+
+    func checkEmailVerification() {
+        guard let user = Auth.auth().currentUser else { return }  // <-- use Auth.auth().currentUser
+        user.reload { error in
+            if let error = error {
+                print("Failed to reload user: \(error.localizedDescription)")
+                return
+            }
+            
+            if user.isEmailVerified {
+                self.userSession = user
+            } else {
+                // Optionally: Log out the user or show a prompt that they need to verify their email
+                self.userSession = nil
+            }
+        }
+    }
+
+
     
     init() {
         setupSuscribers()

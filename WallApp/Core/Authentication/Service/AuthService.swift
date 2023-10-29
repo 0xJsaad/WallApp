@@ -54,6 +54,28 @@ class AuthService {
             print("DEBUG: Failed to create user with error \(error.localizedDescription)")
         }
     }
+    /// Email verification
+    
+    @MainActor
+    func sendEmailVerificationLink(to email: String) async throws {
+        guard let currentUser = self.userSession else {
+            print("DEBUG: No user is currently logged in.")
+            return
+        }
+
+        // Create actionCodeSettings
+        let actionCodeSettings = ActionCodeSettings()
+        actionCodeSettings.url = URL(string: "https://wallapptsl.page.link/email-link-sign-up")
+        actionCodeSettings.handleCodeInApp = true
+        actionCodeSettings.setIOSBundleID(Bundle.main.bundleIdentifier!)
+        
+        // Send verification link
+        try await currentUser.sendEmailVerification(with: actionCodeSettings)
+        print("DEBUG: Verification link sent to email \(email).")
+        
+        // Store email used to sign in for later (for use when app relaunches)
+        UserDefaults.standard.setValue(email, forKey: "EmailForSignIn")
+    }
     
     /// Sign in anonymously with Firebase
     @MainActor

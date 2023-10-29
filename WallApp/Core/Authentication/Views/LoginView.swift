@@ -31,18 +31,8 @@ struct LoginView: View {
                     SecureField("Enter your password", text: $viewModel.password)
                         .modifier(WallAppTextFieldModifiers())
                 }
-                
-                NavigationLink {
-                    Text("Forgot password")
-                } label: {
-                    Text("Forgot Password?")
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-                        .padding(.vertical)
-                        .padding(.trailing, 28)
-                        .foregroundColor(.primary)
-                        .frame(maxWidth: .infinity, alignment: .trailing)
-                }
+                .padding(.vertical)
+               
                 
                 // MARK: Anonymous login
                 if AuthService.shared.isUserAnonymous {
