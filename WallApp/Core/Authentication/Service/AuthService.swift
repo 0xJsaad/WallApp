@@ -9,6 +9,8 @@ import Firebase
 import FirebaseFirestoreSwift
 import FirebaseFirestore
 
+
+
 class AuthService {
     
     @Published var userSession: FirebaseAuth.User?
@@ -136,3 +138,4 @@ class AuthService {
         }
     }
 }
+

@@ -43,6 +43,8 @@ struct RegistrationView: View {
             } label: {
                 Text("Sign Up")
                     .modifier(WallAppButtonModifier())
+                    .accessibilityIdentifier("SignUpButton") // Adding accessibility identifier
+
             }
             .padding(.vertical)
             

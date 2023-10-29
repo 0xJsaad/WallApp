@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "5191DB5E-1B47-4D90-A8EF-2BE437DDBD89",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:..\/..\/Library\/Developer\/Xcode\/DerivedData\/WallApp-bekmmzkotqfszgburkvufhdvpqpf\/SourcePackages\/checkouts\/promises\/Promises.playground",
+      "identifier" : "PLAYGROUND-TARGET:\/Users\/0xjs\/Library\/Developer\/Xcode\/DerivedData\/WallApp-bekmmzkotqfszgburkvufhdvpqpf\/SourcePackages\/checkouts\/promises\/Promises.playground",
+      "name" : "Promises"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:WallApp.xcodeproj",
+        "identifier" : "D547BF232ADE16310006D2B4",
+        "name" : "WallAppTests"
+      }
+    }
+  ],
+  "version" : 1
+}

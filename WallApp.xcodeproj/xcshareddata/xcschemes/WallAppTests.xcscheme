@@ -5,49 +5,26 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-      <BuildActionEntries>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D547BF132ADE162F0006D2B4"
-               BuildableName = "WallApp.app"
-               BlueprintName = "WallApp"
-               ReferencedContainer = "container:WallApp.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      shouldAutocreateTestPlan = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
+      <TestPlans>
+         <TestPlanReference
+            reference = "container:WallAppTests.xctestplan"
+            default = "YES">
+         </TestPlanReference>
+      </TestPlans>
       <Testables>
          <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
+            skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D547BF232ADE16310006D2B4"
                BuildableName = "WallAppTests.xctest"
                BlueprintName = "WallAppTests"
-               ReferencedContainer = "container:WallApp.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D547BF2D2ADE16310006D2B4"
-               BuildableName = "WallAppUITests.xctest"
-               BlueprintName = "WallAppUITests"
                ReferencedContainer = "container:WallApp.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -74,16 +51,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D547BF132ADE162F0006D2B4"
-            BuildableName = "WallApp.app"
-            BlueprintName = "WallApp"
-            ReferencedContainer = "container:WallApp.xcodeproj">
+            BlueprintIdentifier = "PLAYGROUND-TARGET:/Users/0xjs/Library/Developer/Xcode/DerivedData/WallApp-bekmmzkotqfszgburkvufhdvpqpf/SourcePackages/checkouts/promises/Promises.playground"
+            BuildableName = "Promises"
+            BlueprintName = "Promises"
+            ReferencedContainer = "container:../../Library/Developer/Xcode/DerivedData/WallApp-bekmmzkotqfszgburkvufhdvpqpf/SourcePackages/checkouts/promises/Promises.playground">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <LocationScenarioReference
          identifier = "com.apple.dt.IDEFoundation.CurrentLocationScenarioIdentifier"
          referenceType = "1">
@@ -95,16 +71,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D547BF132ADE162F0006D2B4"
-            BuildableName = "WallApp.app"
-            BlueprintName = "WallApp"
-            ReferencedContainer = "container:WallApp.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

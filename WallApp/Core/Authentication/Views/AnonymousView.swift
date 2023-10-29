@@ -35,7 +35,7 @@ struct AnonymousView: View {
                     Button(action: {
                         navigateToLogin = true
                     }) {
-                        Text("Create Account") // Updated button text
+                        Text("Create Account")
                             .font(.headline)
                             .padding()
                             .background(Color.purple)

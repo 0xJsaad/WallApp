@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D509CFE82AEE0F58004B8E73 /* AnonymousViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D509CFE72AEE0F58004B8E73 /* AnonymousViewUITests.swift */; };
 		D533B14D2AE4509E00801CB8 /* PreviewProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D533B14C2AE4509E00801CB8 /* PreviewProvider.swift */; };
 		D536EA432AE342DB007711BA /* ExploreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D536EA422AE342DB007711BA /* ExploreViewModel.swift */; };
 		D547BF182ADE162F0006D2B4 /* WallAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF172ADE162F0006D2B4 /* WallAppApp.swift */; };
 		D547BF1A2ADE162F0006D2B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF192ADE162F0006D2B4 /* ContentView.swift */; };
 		D547BF1C2ADE16310006D2B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D547BF1B2ADE16310006D2B4 /* Assets.xcassets */; };
 		D547BF1F2ADE16310006D2B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D547BF1E2ADE16310006D2B4 /* Preview Assets.xcassets */; };
-		D547BF292ADE16310006D2B4 /* WallAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF282ADE16310006D2B4 /* WallAppTests.swift */; };
-		D547BF332ADE16310006D2B4 /* WallAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF322ADE16310006D2B4 /* WallAppUITests.swift */; };
-		D547BF352ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF342ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift */; };
 		D547BF4D2ADE16CC0006D2B4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF4C2ADE16CC0006D2B4 /* LoginView.swift */; };
 		D547BF4F2ADE20110006D2B4 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF4E2ADE20110006D2B4 /* RegistrationView.swift */; };
 		D547BF522ADE21CF0006D2B4 /* WallAppTextFieldModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D547BF512ADE21CE0006D2B4 /* WallAppTextFieldModifiers.swift */; };
@@ -55,6 +53,9 @@
 		D5AD70792AEA9B7F00AA3DC3 /* WallDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD70782AEA9B7F00AA3DC3 /* WallDetailsViewModel.swift */; };
 		D5AD707B2AEA9EB900AA3DC3 /* WallReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD707A2AEA9EB900AA3DC3 /* WallReplyCell.swift */; };
 		D5AD707D2AEB4DD100AA3DC3 /* WallReplyProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD707C2AEB4DD100AA3DC3 /* WallReplyProfileCell.swift */; };
+		D5AD709F2AEDF07F00AA3DC3 /* AuthServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD709E2AEDF07F00AA3DC3 /* AuthServiceTests.swift */; };
+		D5AD70A42AEDF9FF00AA3DC3 /* LoginViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD70A32AEDF9FF00AA3DC3 /* LoginViewUITests.swift */; };
+		D5AD70A72AEE057B00AA3DC3 /* RegistrationViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AD70A62AEE057B00AA3DC3 /* RegistrationViewUITests.swift */; };
 		D5E77F462AE6730B00645367 /* WallFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E77F452AE6730B00645367 /* WallFilterViewModel.swift */; };
 		D5E77F482AE6735100645367 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E77F472AE6735100645367 /* ProfileViewModel.swift */; };
 		D5F5697C2AE57EA00080851D /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F5697B2AE57EA00080851D /* CurrentUserProfileView.swift */; };
@@ -86,9 +87,17 @@
 			remoteGlobalIDString = D547BF132ADE162F0006D2B4;
 			remoteInfo = WallApp;
 		};
+		D5AD70992AEDEFB600AA3DC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D547BF0C2ADE162F0006D2B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D547BF132ADE162F0006D2B4;
+			remoteInfo = WallApp;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D509CFE72AEE0F58004B8E73 /* AnonymousViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousViewUITests.swift; sourceTree = "<group>"; };
 		D533B14C2AE4509E00801CB8 /* PreviewProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewProvider.swift; sourceTree = "<group>"; };
 		D536EA422AE342DB007711BA /* ExploreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewModel.swift; sourceTree = "<group>"; };
 		D547BF142ADE162F0006D2B4 /* WallApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WallApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,10 +106,7 @@
 		D547BF1B2ADE16310006D2B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D547BF1E2ADE16310006D2B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D547BF242ADE16310006D2B4 /* WallAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WallAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D547BF282ADE16310006D2B4 /* WallAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppTests.swift; sourceTree = "<group>"; };
 		D547BF2E2ADE16310006D2B4 /* WallAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WallAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D547BF322ADE16310006D2B4 /* WallAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppUITests.swift; sourceTree = "<group>"; };
-		D547BF342ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D547BF4C2ADE16CC0006D2B4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		D547BF4E2ADE20110006D2B4 /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 		D547BF512ADE21CE0006D2B4 /* WallAppTextFieldModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallAppTextFieldModifiers.swift; sourceTree = "<group>"; };
@@ -137,6 +143,12 @@
 		D5AD707A2AEA9EB900AA3DC3 /* WallReplyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallReplyCell.swift; sourceTree = "<group>"; };
 		D5AD707C2AEB4DD100AA3DC3 /* WallReplyProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallReplyProfileCell.swift; sourceTree = "<group>"; };
 		D5AD70822AEB86D900AA3DC3 /* WallApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WallApp.entitlements; sourceTree = "<group>"; };
+		D5AD70902AEDEEC800AA3DC3 /* WallAppTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = WallAppTests.xctestplan; sourceTree = "<group>"; };
+		D5AD70952AEDEFB500AA3DC3 /* AuthServiceTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AuthServiceTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5AD709E2AEDF07F00AA3DC3 /* AuthServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceTests.swift; sourceTree = "<group>"; };
+		D5AD70A32AEDF9FF00AA3DC3 /* LoginViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewUITests.swift; sourceTree = "<group>"; };
+		D5AD70A52AEE01FE00AA3DC3 /* WallAppUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = WallAppUITests.xctestplan; sourceTree = "<group>"; };
+		D5AD70A62AEE057B00AA3DC3 /* RegistrationViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewUITests.swift; sourceTree = "<group>"; };
 		D5E77F452AE6730B00645367 /* WallFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallFilterViewModel.swift; sourceTree = "<group>"; };
 		D5E77F472AE6735100645367 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		D5F5697B2AE57EA00080851D /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
@@ -179,6 +191,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D5AD70922AEDEFB500AA3DC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -193,9 +212,11 @@
 		D547BF0B2ADE162F0006D2B4 = {
 			isa = PBXGroup;
 			children = (
+				D5AD70A52AEE01FE00AA3DC3 /* WallAppUITests.xctestplan */,
+				D5AD70902AEDEEC800AA3DC3 /* WallAppTests.xctestplan */,
 				D547BF162ADE162F0006D2B4 /* WallApp */,
 				D547BF272ADE16310006D2B4 /* WallAppTests */,
-				D547BF312ADE16310006D2B4 /* WallAppUITests */,
+				D5AD708C2AEDE45E00AA3DC3 /* WallAppUITest */,
 				D547BF152ADE162F0006D2B4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -206,6 +227,7 @@
 				D547BF142ADE162F0006D2B4 /* WallApp.app */,
 				D547BF242ADE16310006D2B4 /* WallAppTests.xctest */,
 				D547BF2E2ADE16310006D2B4 /* WallAppUITests.xctest */,
+				D5AD70952AEDEFB500AA3DC3 /* AuthServiceTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -236,18 +258,13 @@
 		D547BF272ADE16310006D2B4 /* WallAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				D547BF282ADE16310006D2B4 /* WallAppTests.swift */,
+				D5AD708D2AEDE99400AA3DC3 /* AuthServiceTests */,
+				D5AD70872AEDE3B900AA3DC3 /* ViewModeltests */,
+				D5AD708B2AEDE43D00AA3DC3 /* NetworkTests */,
+				D5AD708A2AEDE43500AA3DC3 /* ViewModelTests */,
+				D5AD70892AEDE42F00AA3DC3 /* ModelTests */,
 			);
 			path = WallAppTests;
-			sourceTree = "<group>";
-		};
-		D547BF312ADE16310006D2B4 /* WallAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				D547BF322ADE16310006D2B4 /* WallAppUITests.swift */,
-				D547BF342ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift */,
-			);
-			path = WallAppUITests;
 			sourceTree = "<group>";
 		};
 		D547BF412ADE16420006D2B4 /* Utilities */ = {
@@ -596,6 +613,69 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		D5AD70872AEDE3B900AA3DC3 /* ViewModeltests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModeltests;
+			path = ../WallAppUITests/ViewModeltests;
+			sourceTree = "<group>";
+		};
+		D5AD70882AEDE3CA00AA3DC3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		D5AD70892AEDE42F00AA3DC3 /* ModelTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelTests;
+			sourceTree = "<group>";
+		};
+		D5AD708A2AEDE43500AA3DC3 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		D5AD708B2AEDE43D00AA3DC3 /* NetworkTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkTests;
+			sourceTree = "<group>";
+		};
+		D5AD708C2AEDE45E00AA3DC3 /* WallAppUITest */ = {
+			isa = PBXGroup;
+			children = (
+				D5AD70882AEDE3CA00AA3DC3 /* Navigation */,
+				D5AD70A22AEDF9E700AA3DC3 /* Views */,
+			);
+			path = WallAppUITest;
+			sourceTree = "<group>";
+		};
+		D5AD708D2AEDE99400AA3DC3 /* AuthServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				D5AD709E2AEDF07F00AA3DC3 /* AuthServiceTests.swift */,
+			);
+			path = AuthServiceTests;
+			sourceTree = "<group>";
+		};
+		D5AD70A22AEDF9E700AA3DC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D5AD70A32AEDF9FF00AA3DC3 /* LoginViewUITests.swift */,
+				D5AD70A62AEE057B00AA3DC3 /* RegistrationViewUITests.swift */,
+				D509CFE72AEE0F58004B8E73 /* AnonymousViewUITests.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D5E77F362AE64F3D00645367 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -752,6 +832,24 @@
 			productReference = D547BF2E2ADE16310006D2B4 /* WallAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		D5AD70942AEDEFB500AA3DC3 /* AuthServiceTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5AD709B2AEDEFB600AA3DC3 /* Build configuration list for PBXNativeTarget "AuthServiceTest" */;
+			buildPhases = (
+				D5AD70912AEDEFB500AA3DC3 /* Sources */,
+				D5AD70922AEDEFB500AA3DC3 /* Frameworks */,
+				D5AD70932AEDEFB500AA3DC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5AD709A2AEDEFB600AA3DC3 /* PBXTargetDependency */,
+			);
+			name = AuthServiceTest;
+			productName = AuthServiceTest;
+			productReference = D5AD70952AEDEFB500AA3DC3 /* AuthServiceTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -771,6 +869,10 @@
 					};
 					D547BF2D2ADE16310006D2B4 = {
 						CreatedOnToolsVersion = 15.0;
+						TestTargetID = D547BF132ADE162F0006D2B4;
+					};
+					D5AD70942AEDEFB500AA3DC3 = {
+						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = D547BF132ADE162F0006D2B4;
 					};
 				};
@@ -795,6 +897,7 @@
 				D547BF132ADE162F0006D2B4 /* WallApp */,
 				D547BF232ADE16310006D2B4 /* WallAppTests */,
 				D547BF2D2ADE16310006D2B4 /* WallAppUITests */,
+				D5AD70942AEDEFB500AA3DC3 /* AuthServiceTest */,
 			);
 		};
 /* End PBXProject section */
@@ -818,6 +921,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D547BF2C2ADE16310006D2B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5AD70932AEDEFB500AA3DC3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -889,7 +999,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D547BF292ADE16310006D2B4 /* WallAppTests.swift in Sources */,
+				D5AD709F2AEDF07F00AA3DC3 /* AuthServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -897,8 +1007,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D547BF352ADE16310006D2B4 /* WallAppUITestsLaunchTests.swift in Sources */,
-				D547BF332ADE16310006D2B4 /* WallAppUITests.swift in Sources */,
+				D509CFE82AEE0F58004B8E73 /* AnonymousViewUITests.swift in Sources */,
+				D5AD70A42AEDF9FF00AA3DC3 /* LoginViewUITests.swift in Sources */,
+				D5AD70A72AEE057B00AA3DC3 /* RegistrationViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5AD70912AEDEFB500AA3DC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -914,6 +1032,11 @@
 			isa = PBXTargetDependency;
 			target = D547BF132ADE162F0006D2B4 /* WallApp */;
 			targetProxy = D547BF2F2ADE16310006D2B4 /* PBXContainerItemProxy */;
+		};
+		D5AD709A2AEDEFB600AA3DC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D547BF132ADE162F0006D2B4 /* WallApp */;
+			targetProxy = D5AD70992AEDEFB600AA3DC3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1176,6 +1299,42 @@
 			};
 			name = Release;
 		};
+		D5AD709C2AEDEFB600AA3DC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 983DFYNW3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juansaad.AuthServiceTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WallApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WallApp";
+			};
+			name = Debug;
+		};
+		D5AD709D2AEDEFB600AA3DC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 983DFYNW3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.juansaad.AuthServiceTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WallApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WallApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1211,6 +1370,15 @@
 			buildConfigurations = (
 				D547BF3F2ADE16310006D2B4 /* Debug */,
 				D547BF402ADE16310006D2B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5AD709B2AEDEFB600AA3DC3 /* Build configuration list for PBXNativeTarget "AuthServiceTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5AD709C2AEDEFB600AA3DC3 /* Debug */,
+				D5AD709D2AEDEFB600AA3DC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
